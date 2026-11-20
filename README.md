@@ -1,2 +1,543 @@
 # OOs-market-1
 Add a README file
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f36b12"><title>OOs Market | متجر احتياجاتك</title>
+<style>
+:root{--orange:#f36b12;--orange2:#ff8a38;--ink:#20242b;--muted:#7c8490;--bg:#fff8f2;--line:#f0e7df;--green:#159b68;--shadow:0 8px 28px #47240e0d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Arial,Tahoma,sans-serif;color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1100px;margin:auto;padding:0 16px}
+header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 18px #26180b0b}.head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}.brand{display:flex;align-items:flex-start;gap:10px;font-weight:900;font-size:22px;direction:ltr}.brandtext{display:flex;flex-direction:column;align-items:flex-start;gap:4px}.account-name{font-size:12px;color:#c94e08;direction:rtl;font-weight:700;min-height:15px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,var(--orange),#ffb06f);display:grid;place-items:center;color:white;font-size:23px}.brand span:last-child{color:var(--orange)}.head-actions{display:flex;gap:8px;align-items:center}.iconbtn,.lang{border:1px solid var(--line);background:white;border-radius:12px;padding:10px 12px;color:var(--ink)}.carttop{background:var(--orange);border:0;color:#fff;border-radius:12px;padding:11px 14px;font-weight:bold}.hero{margin:22px auto 18px;background:linear-gradient(115deg,#f36b12,#ff9b53);border-radius:24px;color:white;padding:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;min-height:180px}.hero h1{font-size:clamp(24px,4vw,36px);margin:0 0 9px}.hero p{margin:0 0 18px;opacity:.95}.hero .shopnow{background:white;color:#d95708;border:0;border-radius:12px;padding:11px 18px;font-weight:bold}.hero-art{font-size:95px;filter:drop-shadow(0 10px 8px #7c310b44)}
+.tools{display:flex;gap:10px;margin:18px 0;flex-wrap:wrap}.searchbox{flex:1;min-width:210px;position:relative}.searchbox input{width:100%;padding:14px 42px 14px 14px;border:1px solid var(--line);border-radius:14px;background:white;outline:none}.searchbox:before{content:'⌕';position:absolute;right:15px;top:8px;font-size:27px;color:var(--muted)}.area{border:1px solid var(--line);background:white;border-radius:14px;padding:0 12px;min-width:150px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:22px 0 12px}.section-title h2{font-size:21px;margin:0}.muted{color:var(--muted);font-size:13px}.chips{display:flex;gap:8px;overflow:auto;padding:2px 0 8px}.chip{border:1px solid #f3dfd0;background:white;color:#8d4a20;border-radius:30px;padding:9px 16px;white-space:nowrap}.chip.active,.chip:hover{background:#fff0e5;border-color:#ffd0ad;color:#d95708}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:#fff;border:1px solid #f3eee9;border-radius:18px;padding:10px;box-shadow:var(--shadow);min-width:0;position:relative}.photo{height:150px;border-radius:13px;background:linear-gradient(140deg,#fff8f2,#f5f6f7);display:grid;place-items:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:contain;padding:8px}.emoji{font-size:64px}.tag{position:absolute;top:17px;right:17px;background:#fff;color:#d95708;border-radius:20px;padding:5px 9px;font-size:11px;font-weight:bold}.pname{font-weight:bold;line-height:1.45;margin:10px 2px 4px;min-height:40px}.unit{font-size:12px;color:var(--muted)}.pfoot{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:6px}.price{font-size:18px;font-weight:900}.price small{font-size:11px;color:var(--muted);font-weight:normal}.add{border:0;background:var(--orange);color:white;width:40px;height:40px;border-radius:13px;font-size:24px}.stockout{opacity:.55}.stockout .add{background:#aaa}.admin-shortcut{margin:20px 0;background:#fff;border:1px dashed #f5b88d;border-radius:16px;padding:13px;display:flex;justify-content:space-between;align-items:center;gap:10px}.admin-shortcut button{background:#292f38;color:white;border:0;border-radius:11px;padding:10px 14px}.panel{display:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px;margin:18px 0;box-shadow:var(--shadow)}.panel.show{display:block}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:8px}.panelhead h2{margin:0;font-size:20px}.tabs{display:flex;gap:8px;overflow:auto;margin:15px 0}.tab{border:0;background:#f5f5f5;padding:9px 13px;border-radius:10px;white-space:nowrap}.tab.active{background:#fff0e5;color:#c94e08;font-weight:bold}.adminstats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#fff8f2;border-radius:13px;padding:12px}.stat b{display:block;font-size:20px;margin-top:5px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.field{width:100%;padding:11px;border:1px solid var(--line);border-radius:11px;background:white;min-width:0}.formgrid .wide{grid-column:1/-1}.primary{background:var(--orange);border:0;color:white;padding:12px 16px;border-radius:11px;font-weight:bold}.secondary{background:#fff0e5;color:#c94e08;border:0;padding:10px 13px;border-radius:10px}.danger{background:#fff0f0;color:#c33;border:0;padding:9px 11px;border-radius:9px}.adminlist{display:grid;gap:9px;margin-top:14px}.adminitem{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:13px;padding:9px}.adminitem .thumb{width:48px;height:48px;border-radius:10px;background:#f7f7f7;display:grid;place-items:center;overflow:hidden;font-size:25px;flex:none}.thumb img{width:100%;height:100%;object-fit:contain}.adminitem .info{flex:1;min-width:0}.adminitem .info b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.adminitem .actions{display:flex;gap:5px;align-items:center}.mini{border:0;background:#fff0e5;color:#c94e08;border-radius:8px;padding:7px 10px;font-weight:bold}.order{border:1px solid var(--line);padding:12px;border-radius:13px;margin-top:9px}.orderhead{display:flex;justify-content:space-between;gap:8px}.empty{text-align:center;color:var(--muted);padding:24px}.cartpanel{display:none;background:white;border:2px solid #f36b12;border-radius:18px;padding:18px;margin:18px 0;box-shadow:0 8px 28px #f36b1222}.cartpanel.show{display:block}.carttop{min-width:145px}.cartbadge{display:inline-grid;place-items:center;min-width:23px;height:23px;padding:0 6px;border-radius:20px;background:#fff;color:#d95708;margin-right:5px}.store-notice{display:none;margin:16px auto;padding:14px;border-radius:14px;background:#fff0f0;border:1px solid #efb4b4;color:#a22;font-weight:bold;text-align:center}.store-notice.show{display:block}.store-open{background:#e9f8ef;border-color:#b6e2c5;color:#176b3c}.cart-summary{background:#fff8f2;border-radius:13px;padding:8px 12px;margin-top:10px}.cartpanel.show{display:block}.cartline{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.qty button{border:0;background:#fff0e5;color:#c94e08;border-radius:7px;padding:4px 9px}.checkoutgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.checkoutgrid .wide{grid-column:1/-1}.totalrow{display:flex;justify-content:space-between;padding:12px 0;font-weight:bold}.bottom{display:flex;justify-content:center;gap:18px;padding:22px 10px;color:var(--muted);font-size:13px}footer{text-align:center;padding:18px;color:var(--muted);font-size:12px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.photo{height:180px}}@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:480px){.hero{padding:20px}.hero-art{font-size:65px}.adminstats{grid-template-columns:1fr 1fr}.adminstats .stat:last-child{grid-column:1/-1}.adminitem{flex-wrap:wrap}.adminitem .actions{width:100%;justify-content:flex-end}.checkoutgrid{grid-template-columns:1fr}.checkoutgrid .wide{grid-column:auto}}
+
+.admin-shortcut{display:none!important}.side-launcher{position:fixed;right:12px;top:42%;z-index:30;background:#f36b12;color:#fff;border:0;border-radius:16px 0 0 16px;padding:14px 12px;font-weight:bold;box-shadow:0 5px 18px #0002;writing-mode:vertical-rl}
+.side-panel{display:none;position:fixed;z-index:29;right:10px;top:12%;bottom:12%;width:min(440px,calc(100vw - 20px));overflow:auto;background:#fff;border:1px solid #f0e7df;border-radius:18px;padding:16px;box-shadow:0 12px 40px #0003}
+.side-panel.show{display:block}.side-tabs{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.side-tabs button{border:0;background:#fff0e5;color:#bd4b08;padding:9px 11px;border-radius:10px}.side-tabs button.active{background:#f36b12;color:#fff}
+.status-pill{display:inline-block;padding:5px 9px;border-radius:20px;background:#fff0e5;color:#a9470b;font-size:12px}
+.chatbox{border:1px solid #eee;border-radius:12px;padding:10px;max-height:210px;overflow:auto;margin:10px 0;background:#fffaf6}
+.chatmsg{padding:8px 10px;border-radius:10px;background:#f4f4f4;margin:6px 0;overflow-wrap:anywhere}.chatmsg.admin{background:#fff0e5}
+@media(max-width:480px){.side-launcher{top:auto;bottom:110px;right:0}.side-panel{top:7%;bottom:7%}}
+
+.review-modal{display:none;position:fixed;inset:0;background:#0008;z-index:60;align-items:center;justify-content:center;padding:16px}.review-modal.show{display:flex}.review-box{background:#fff;border-radius:18px;padding:18px;width:min(440px,100%);box-shadow:0 15px 45px #0003}.review-box h3{margin-top:0}.review-stars{font-size:24px;color:#e58a00;letter-spacing:3px}
+
+.order-progress{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.progress-step{padding:7px 9px;border-radius:10px;background:#f2f2f2;color:#777;font-size:12px}.progress-step.done{background:#e4f8eb;color:#14753c;font-weight:bold}.order-chat{border:1px solid #eee;border-radius:13px;padding:10px;margin-top:12px;background:#fff}.chat-bubble{padding:8px 10px;border-radius:12px;background:#f2f2f2;margin:7px 0;overflow-wrap:anywhere}.chat-bubble.mine{background:#e6f7eb}.order-chat .field{margin:5px 0}.callbtn{background:#e7f8ec;color:#16743b;border:0;padding:10px;border-radius:10px;font-weight:bold}.hub-actions{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+
+/* OOs Market home redesign */
+:root{--orange:#f36b12;--orange2:#ff983f;--bg:#fff9f4;--ink:#172033;--line:#eee3da}
+body{background:linear-gradient(180deg,#fff 0,#fff8f2 45%,#fff 100%)}
+header{background:linear-gradient(110deg,#f36b12,#ff8d35);color:#fff}
+.head{padding:12px 0;gap:8px}.brand{align-items:center;font-size:21px;color:#fff}.brand span:last-child{color:#fff}.logo{background:#ffffff24;border:1px solid #ffffff55}.account-name{color:#fff;font-size:12px;opacity:.95}
+.head-actions{flex-wrap:wrap;justify-content:flex-end}.lang{border-color:#ffffff70;background:#fff;color:#252b35}.carttop{background:#fff;color:#d95708;border:1px solid #fff;box-shadow:0 3px 10px #963d0b20}.cartbadge{background:#f36b12;color:#fff}
+.hero{margin:18px auto 14px;min-height:220px;padding:24px;background:linear-gradient(120deg,#fff0d8,#ffd5ad 58%,#ff9b50);color:#172033;border:1px solid #ffb56e;position:relative}.hero h1{font-size:clamp(25px,5vw,37px);color:#d64f00}.hero p{font-size:16px;color:#394354}.hero .shopnow{background:linear-gradient(90deg,#f36b12,#ff8c28);color:#fff;border-radius:16px;padding:13px 20px}.hero-art{font-size:clamp(65px,18vw,115px)}
+.store-notice{display:block;margin:12px auto;border-radius:18px;padding:15px;background:#e6f8ec;border-color:#bde8ca;color:#176b3c;font-size:15px}
+.tools{margin:16px 0}.searchbox input{padding:15px 44px 15px 14px;border-radius:18px;font-size:16px}.area{border-radius:14px}
+.section-title{margin:22px 0 12px}.section-title h2{font-size:23px}.chips{gap:9px}.chip{padding:12px 18px;border-radius:24px;font-size:15px}.chip.active{border:1px solid #ff8b32;background:#fff0e5}
+.grid{gap:12px}.card{border-radius:18px;padding:10px}.photo{height:135px;background:#fff9f4;border:1px solid #f5ebe3}.pname{font-size:15px}.add{border-radius:50%;width:42px;height:42px}.side-launcher{display:none!important}
+#driverLocationPanel,#orderHub,#driverHub{display:none!important}
+.bottom-nav{position:sticky;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:#ffffffed;backdrop-filter:blur(8px);border-top:1px solid #eee4dc;padding:8px 4px calc(8px + env(safe-area-inset-bottom));margin-top:22px;box-shadow:0 -4px 18px #26180b0a}
+.bottom-nav button{border:0;background:transparent;color:#4d5562;padding:5px 2px;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px}.bottom-nav button b{font-size:21px;font-weight:normal}.bottom-nav button.active{color:#f36b12;font-weight:bold}
+@media(max-width:480px){.head{align-items:flex-start}.brand{font-size:19px}.head-actions{gap:5px}.carttop{padding:9px 10px}.hero{min-height:190px;padding:18px}.hero-art{font-size:66px}.photo{height:125px}.bottom-nav button{font-size:11px}}
+
+.detail-modal{display:none;position:fixed;inset:0;background:#0008;z-index:100;overflow:auto;padding:16px}.detail-modal.show{display:block}.detail-box{max-width:650px;margin:4vh auto;background:#fff;border-radius:20px;padding:16px;box-shadow:0 12px 40px #0003}.detail-gallery{height:240px;background:#fff8f2;border-radius:14px;display:grid;place-items:center;overflow:hidden;margin:10px 0}.detail-gallery img{width:100%;height:100%;object-fit:contain}.detail-thumbs{display:flex;gap:8px;overflow:auto}.detail-thumbs button{width:65px;height:60px;border:1px solid #eee;border-radius:10px;background:#fff;overflow:hidden;flex:none}.detail-thumbs img{width:100%;height:100%;object-fit:contain}.detail-actions{display:flex;gap:8px;flex-wrap:wrap}.detail-actions button{flex:1;min-width:120px}.favorite-btn{border:0;background:#fff0f0;color:#d22;border-radius:10px;padding:10px}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.related-card{border:1px solid #eee;border-radius:11px;padding:8px;text-align:center;cursor:pointer}.related-card img{height:65px;width:100%;object-fit:contain}.detail-option{display:inline-block;margin:4px;padding:8px 12px;border-radius:20px;background:#fff0e5;color:#b64a08}.detail-option.selected{background:#f36b12;color:white}@media(max-width:480px){.detail-gallery{height:190px}.related-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Language-specific storefront personalities */
+.market-style-banner{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:12px 0;padding:14px 18px;border-radius:16px;background:linear-gradient(100deg,#fff0df,#ffe0bd);border:1px solid #ffc58e;color:#a84400;font-weight:700}
+.market-style-banner span{font-weight:500;font-size:13px}
+body.lang-en{background:#f5f7fa;color:#182230;font-family:Arial,Helvetica,sans-serif}
+body.lang-en .hero{background:linear-gradient(120deg,#f0f5ff,#dceaff);border-color:#c8dcff;color:#182230;border-radius:18px}
+body.lang-en .hero h1{color:#173b73}
+body.lang-en .hero .shopnow{background:#2463eb;color:white}
+body.lang-en .market-style-banner{background:#eaf1ff;border-color:#d6e3ff;color:#2456a4}
+body.lang-en .chip{border-color:#dbe3ed;color:#334155;border-radius:12px}
+body.lang-en .chip.active{background:#eaf1ff;border-color:#b8d0ff;color:#1d4ed8}
+body.lang-en .card{border-radius:18px;box-shadow:0 4px 18px #20334d0b}
+body.lang-en .photo{height:190px;background:#f7f9fc}
+body.lang-en .add,body.lang-en .primary{background:#2563eb}
+body.lang-en .carttop{background:#2563eb;color:#fff;border-color:#2563eb}
+body.lang-en .section-title h2{font-size:23px;letter-spacing:-.3px}
+body.lang-zh{background:#fff8f1;color:#4a1608;font-family:Arial,"Noto Sans SC",sans-serif}
+body.lang-zh .hero{background:linear-gradient(115deg,#b91c1c,#e94b19 55%,#ffb52e);color:#fff;border:2px solid #f4c24f;border-radius:14px}
+body.lang-zh .hero h1{color:#fff}
+body.lang-zh .hero p{color:#fff}
+body.lang-zh .hero .shopnow{background:#ffdf72;color:#7c1b0a}
+body.lang-zh .market-style-banner{background:linear-gradient(90deg,#b91c1c,#df3d17,#f4b82d);border:1px solid #e8b441;color:#fff;border-radius:12px}
+body.lang-zh .chip{background:#fff;border-color:#f1c48a;color:#9a3412;border-radius:9px;padding:8px 12px}
+body.lang-zh .chip.active{background:#b91c1c;border-color:#b91c1c;color:#fff}
+body.lang-zh .card{border:1px solid #f3d4a8;border-radius:12px;box-shadow:0 3px 10px #9b35120a}
+body.lang-zh .tag{background:#fff1c9;color:#9a3412}
+body.lang-zh .price{color:#c51e13;font-weight:900}
+body.lang-zh .add,body.lang-zh .primary{background:linear-gradient(90deg,#c91e19,#ef5a17);color:#fff}
+body.lang-zh .carttop{background:#b91c1c;color:#fff;border-color:#b91c1c}
+body.lang-zh .section-title h2{color:#8c1d12}
+body.lang-zh .grid{gap:9px}
+body.lang-zh .photo{height:145px;background:#fff7e8}
+body.lang-zh .head{gap:6px}
+body.lang-zh .iconbtn,body.lang-zh .lang{border-color:#e8c58c}
+@media(max-width:480px){body.lang-en .photo{height:165px}body.lang-zh .photo{height:120px}.market-style-banner{flex-direction:column;align-items:flex-start}}
+</style></head>
+<body>
+<header><div class="wrap head"><div class="brand" id="brandMark"><div class="logo">🛒</div><div class="brandtext"><div>OOs <span>Market</span></div><div class="account-name" id="accountName">زائر · سجل الدخول</div></div></div><div class="head-actions"><select class="lang" id="lang" onchange="setLang(this.value)"><option value="ar">العربية</option><option value="en">English</option><option value="zh">中文</option><option value="id">Bahasa Indonesia</option></select><button class="carttop" onclick="toggleCart()">🛒 سلة المشتريات <span class="cartbadge" id="cartCount">0</span></button></div></div></header>
+
+
+<section class="side-panel" id="sidePanel" aria-label="التسجيل وخدمة العملاء">
+ <div class="panelhead"><h2>🛍️ OOs Market</h2><button class="danger" type="button" onclick="toggleSidePanel()">إغلاق ✕</button></div>
+ <div class="side-tabs">
+  <button type="button" onclick="sideTab('account',this)">حساب المستخدم</button>
+  <button class="active" type="button" onclick="sideTab('driver',this)">تسجيل عامل توصيل</button>
+  <button type="button" onclick="sideTab('chat',this)">محادثة خدمة العملاء</button>
+  <button type="button" onclick="sideTab('bot',this)">🤖 المساعد الذكي</button>
+ </div><div id="sideContent"></div>
+</section>
+
+<div class="wrap">
+<section class="hero"><div><h1>كل احتياجاتك في مكان واحد</h1><p>تسوق بسهولة… وطلبك لحد باب البيت 🚚</p><button class="shopnow" onclick="document.getElementById('productsTitle').scrollIntoView({behavior:'smooth'})">ابدأ التسوق ←</button></div><div class="hero-art">🛒🛍️</div></section>
+<div class="market-style-banner" id="marketStyleBanner"><b id="styleBannerTitle">✨ عروض اليوم</b><span id="styleBannerText">اختيارات مميزة وأسعار مناسبة</span></div>
+<div class="store-notice" id="storeNotice"></div><div class="market-style-banner" style="display:block"><b>🏬 سوق OOs Market المتكامل</b><span style="display:block;margin-top:5px">بقالة · ملابس · مطاعم · صيدليات · إلكترونيات · خدمات وتوصيل</span></div><div class="tools"><div class="searchbox"><input id="search" placeholder="ابحث عن منتج..." oninput="renderProducts()"></div><select class="area" id="area"><option>التجمع الأول</option><option>التجمع الخامس</option><option>الرحاب</option></select></div>
+<div class="section-title category-heading"><h2 id="categoryHeading">تسوق حسب القسم</h2><span class="muted" id="categorySub">اختار احتياجاتك</span></div><div class="chips" id="chips"><button class="chip active" onclick="setCategory('الكل',this)">الكل</button><button class="chip" onclick="setCategory('مشروبات',this)">🥤 مشروبات</button><button class="chip" onclick="setCategory('شاي',this)">🍵 الشاي</button><button class="chip" onclick="setCategory('بيض',this)">🥚 البيض</button><button class="chip" onclick="setCategory('منزلي',this)">🏠 مستلزمات المنزل</button><button class="chip" onclick="setCategory('ملابس رجالية',this)">👔 ملابس رجالية</button><button class="chip" onclick="setCategory('ملابس نسائية',this)">👗 ملابس نسائية</button><button class="chip" onclick="setCategory('ملابس أطفال',this)">👶 ملابس أطفال</button><button class="chip" onclick="setCategory('أحذية',this)">👟 أحذية</button><button class="chip" onclick="setCategory('شنط وإكسسوارات',this)">👜 شنط وإكسسوارات</button><button class="chip" onclick="setCategory('مطاعم',this)">🍔 مطاعم</button><button class="chip" onclick="setCategory('صيدليات',this)">💊 صيدليات</button><button class="chip" onclick="setCategory('إلكترونيات',this)">📱 إلكترونيات</button><button class="chip" onclick="setCategory('خدمات',this)">🛠️ خدمات</button></div>
+<div class="section-title" id="productsTitle"><h2 id="productsHeading">المنتجات</h2><span class="muted" id="productCount"></span></div><div class="grid" id="products"></div>
+<div class="cartpanel" id="cartPanel"><div class="panelhead"><h2>🛒 سلة المشتريات</h2><button class="secondary" onclick="toggleCart()">إغلاق</button></div><div id="cartItems"></div><div class="totalrow"><span>رسوم التوصيل</span><span>20 ج.م</span></div><div class="totalrow"><span>خصم النقاط</span><span id="pointsDiscount">0 ج.م</span></div><label class="muted" style="display:block;margin:8px 0"><input type="checkbox" id="usePoints" onchange="updateCart()"> استخدم نقاط المكافآت المتاحة</label><div class="totalrow"><span>الإجمالي</span><span id="total">0 ج.م</span></div><div class="order" style="margin-top:10px"><h3>🎟️ كوبون خصم</h3><div style="display:flex;gap:8px"><input class="field" id="couponCode" placeholder="أدخل كود الخصم"><button class="secondary" onclick="applyCoupon()">تطبيق</button></div><div class="muted" id="couponStatus"></div><div class="totalrow"><span>خصم الكوبون</span><span id="couponDiscount">0 ج.م</span></div></div><div class="order"><h3>🛒 قائمة مشتريات أسبوعية</h3><p class="muted">احفظ سلتك الحالية لتستخدمها لاحقاً.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="secondary" onclick="saveWeeklyList()">حفظ القائمة</button><button class="secondary" onclick="loadWeeklyList()">استرجاع القائمة</button><button class="danger" onclick="clearWeeklyList()">حذف القائمة</button></div><div id="weeklyListStatus" class="muted"></div></div><div class="order" id="invoiceActions" style="display:none"><h3>🧾 فاتورة طلبك</h3><button class="primary" onclick="printLastInvoice()">عرض / طباعة الفاتورة</button></div><p class="muted" id="loyaltyHint">سجّل الدخول لجمع النقاط واستبدالها.</p><h3>بيانات التوصيل</h3><div class="checkoutgrid"><input class="field" id="customer" placeholder="الاسم الكامل"><input class="field" id="phone" placeholder="رقم الهاتف" inputmode="tel"><input class="field wide" id="address" placeholder="العنوان بالتفصيل" readonly>
+<select class="field" id="addrGovernorate"><option value="">المحافظة</option><option>القاهرة</option><option>الجيزة</option><option>القليوبية</option></select>
+<input class="field" id="addrCity" placeholder="المدينة / الحي"><input class="field" id="addrArea" placeholder="المنطقة">
+<input class="field" id="addrStreet" placeholder="اسم الشارع"><input class="field" id="addrBuilding" placeholder="رقم المبنى">
+<input class="field" id="addrFloor" placeholder="الدور"><input class="field" id="addrApartment" placeholder="رقم الشقة">
+<input class="field wide" id="addrLandmark" placeholder="علامة مميزة قريبة من الموقع">
+<button class="secondary wide" type="button" onclick="saveCurrentAddress()">💾 حفظ هذا العنوان</button>
+<select class="field wide" id="savedAddressSelect" onchange="loadSavedAddress()"><option value="">اختيار عنوان محفوظ (المنزل / العمل)</option></select>
+<button class="secondary wide" type="button" onclick="getMyLocation('customer')">📍 تحديد موقع الزبون</button><div class="muted wide" id="customerLocationStatus">لم يتم تحديد الموقع بعد</div><button class="primary wide" onclick="checkout()">تأكيد الطلب عبر واتساب</button></div><p class="muted">الدفع عند الاستلام. سيتم فتح واتساب لإرسال تفاصيل الطلب.</p></div>
+<section class="panel show" id="driverLocationPanel"><div class="panelhead"><h2>🚚 عامل التوصيل</h2></div><p class="muted">يمكن لعامل التوصيل تحديد موقعه وإرساله إلى رقم المتجر عبر واتساب.</p><button class="primary" type="button" onclick="getMyLocation('driver')">📍 تحديد موقع عامل التوصيل وإرساله</button><div class="muted" id="driverLocationStatus" style="margin-top:10px">لم يتم تحديد الموقع بعد</div></section>
+
+<section class="panel show" id="orderHub"><div class="panelhead"><h2>📦 متابعة الطلب والتواصل</h2></div><p class="muted">أدخل رقم الطلب ورقم الهاتف المسجل للوصول إلى التتبع والدردشة. هذه نسخة تجريبية محلية.</p><div class="checkoutgrid"><input class="field" id="trackOrderId" placeholder="رقم الطلب"><input class="field" id="trackPhone" placeholder="رقم الهاتف" inputmode="tel"><button class="primary wide" onclick="openOrderHub('customer')">عرض الطلب</button></div><div id="orderHubContent"></div></section>
+<section class="panel" id="driverHub"><div class="panelhead"><h2>🚚 صفحة عامل التوصيل</h2></div><p class="muted">العامل يبحث عن الطلب باستخدام رقم الطلب ورقم العميل، ثم يحدث الحالة ويرسل رسالة للعميل.</p><div class="checkoutgrid"><input class="field" id="driverOrderId" placeholder="رقم الطلب"><input class="field" id="driverCustomerPhone" placeholder="رقم العميل"><button class="primary wide" onclick="openOrderHub('driver')">فتح الطلب</button></div><div id="driverHubContent"></div></section>
+<section class="panel" id="adminPanel"><div class="panelhead"><h2>⚙️ لوحة إدارة OOs Market</h2><button class="danger" onclick="logoutAdmin()">خروج</button></div><div class="tabs"><button class="tab active" onclick="adminTab('overview',this)">نظرة عامة</button><button class="tab" onclick="adminTab('manage',this)">المنتجات</button><button class="tab" onclick="adminTab('orders',this)">الطلبات</button><button class="tab" onclick="adminTab('drivers',this)">طلبات التسجيل</button><button class="tab" onclick="adminTab('permanentDrivers',this)">عمال التوصيل الدائمون</button><button class="tab" onclick="adminTab('support',this)">محادثات العملاء</button><button class="tab" onclick="adminTab('reviews',this)">تقييمات وتعليقات العملاء</button><button class="tab" onclick="adminTab('loyalty',this)">نقاط المكافآت</button><button class="tab" onclick="adminTab('hours',this)">مواعيد المتجر</button><button class="tab" onclick="adminTab('coupons',this)">الكوبونات</button></div><div id="adminContent"></div></section>
+<div class="detail-modal" id="productDetailModal" role="dialog" aria-modal="true"><div class="detail-box"><div class="panelhead"><h2 id="detailTitle">تفاصيل المنتج</h2><button class="danger" onclick="closeProductDetails()">إغلاق ✕</button></div><div class="detail-gallery" id="detailGallery"></div><div class="detail-thumbs" id="detailThumbs"></div><div id="detailContent"></div></div></div>
+<div class="review-modal" id="reviewModal" role="dialog" aria-modal="true"><div class="review-box"><div class="panelhead"><h3>⭐ تقييم المنتج</h3><button class="danger" type="button" onclick="closeReviewForm()">إغلاق ✕</button></div><p id="reviewProductName" class="muted"></p><input class="field" id="reviewCustomerName" placeholder="اسم العميل"><select class="field" id="reviewRating" style="margin-top:9px"><option value="5">⭐⭐⭐⭐⭐ ممتاز – 5</option><option value="4">⭐⭐⭐⭐ جيد جداً – 4</option><option value="3">⭐⭐⭐ جيد – 3</option><option value="2">⭐⭐ مقبول – 2</option><option value="1">⭐ ضعيف – 1</option></select><textarea class="field" id="reviewComment" rows="4" style="margin-top:9px" placeholder="اكتب تعليقك عن المنتج"></textarea><button class="primary" style="width:100%;margin-top:10px" onclick="submitProductReview()">إرسال التقييم</button><p class="muted">التقييم والتعليق يصلان إلى إدارة المتجر فقط ولا يظهران للعملاء الآخرين.</p></div></div>
+</div>
+<nav class="bottom-nav" aria-label="التنقل الرئيسي">
+<button class="active" onclick="homeNav(this)"><b>⌂</b>الرئيسية</button>
+<button onclick="offersNav(this)"><b>🏷️</b>العروض</button>
+<button onclick="chatNav(this)"><b>💬</b>الدردشة</button>
+<button onclick="accountNav(this)"><b>👤</b>حسابي</button>
+</nav>
+<footer>OOs Market © 2026 · واتساب المتجر: 01559381057<br>نسخة تجريبية تحفظ بياناتها على هذا الجهاز والمتصفح. حماية الإدارة هنا محلية وتجريبية وليست بديلاً عن خادم آمن.</footer>
+<script>
+let brandTapCount=0,brandTapTimer=null;
+document.getElementById('brandMark').addEventListener('click',()=>{
+  brandTapCount++;
+  clearTimeout(brandTapTimer);
+  brandTapTimer=setTimeout(()=>brandTapCount=0,1800);
+  if(brandTapCount>=5){brandTapCount=0;adminLogin();}
+});
+const DEFAULT_ITEMS=[
+{id:1,n:'شاي العروسة 250 جرام',cat:'شاي',unit:'عبوة',price:58,emoji:'🍵',img:''},
+{id:2,n:'العروسة مسحوق الشاي الأسود الناعم 100 جرام',cat:'شاي',unit:'عبوة',price:24,emoji:'🍵',img:''},
+{id:3,n:'العروسة أكياس شاي أسود 100 كيس',cat:'شاي',unit:'علبة',price:116,emoji:'🫖',img:''},
+{id:4,n:'العروسة شاي 40 جرام',cat:'شاي',unit:'عبوة',price:11,emoji:'🍵',img:''},
+{id:5,n:'في 7 سوبر صودا كولا 300 مل',cat:'مشروبات',unit:'علبة',price:19,emoji:'🥤',img:''},
+{id:6,n:'في 7 سوبر صودا رمان 300 مل',cat:'مشروبات',unit:'علبة',price:19,emoji:'🥤',img:''},
+{id:7,n:'في 7 سوبر صودا توت أزرق 300 مل',cat:'مشروبات',unit:'علبة',price:19,emoji:'🥤',img:''},
+{id:8,n:'كولا ليمون',cat:'مشروبات',unit:'علبة',price:19,emoji:'🥤',img:''},
+{id:9,n:'مياه',cat:'مشروبات',unit:'كرتونة',price:60,emoji:'💧',img:''},
+{id:10,n:'أكياس زبالة',cat:'منزلي',unit:'عبوة',price:25,emoji:'🗑️',img:''},
+{id:11,n:'بيض أبيض',cat:'بيض',unit:'طبق',price:150,emoji:'🥚',img:''},
+{id:12,n:'بيض أحمر',cat:'بيض',unit:'طبق',price:160,emoji:'🥚',img:''}
+];
+const STORE_SETTINGS_KEY='oos_market_store_hours_v1';
+let storeSettings=(()=>{try{return JSON.parse(localStorage.getItem(STORE_SETTINGS_KEY))||{mode:'auto',open:'09:00',close:'23:00'};}catch(e){return {mode:'auto',open:'09:00',close:'23:00'};}})();
+const KEY='oos_market_v2_products', ORDERKEY='oos_market_v2_orders', REVIEWKEY='oos_market_product_reviews_v1', LOYALTYKEY='oos_market_loyalty_points_v1', PROFIT=5, DELIVERY=20, WHATSAPP='201559381057', OWNER_EMAIL='mhmdalmjahdmhmd59@gmail.com';
+const COUPON_KEY='oos_market_coupons_v1', WEEKLY_KEY='oos_market_weekly_list_v1'; let coupons=JSON.parse(localStorage.getItem(COUPON_KEY)||'[]'),currentCoupon=null,lastInvoiceOrderId=null;
+let favorites=JSON.parse(localStorage.getItem('oos_market_favorites_v1')||'[]');let products=loadProducts(),orders=JSON.parse(localStorage.getItem(ORDERKEY)||'[]'),productReviews=JSON.parse(localStorage.getItem(REVIEWKEY)||'[]'),loyaltyPoints=JSON.parse(localStorage.getItem(LOYALTYKEY)||'{}'),cart={},category='الكل',isAdmin=false,editingId=null,currentReviewProductId=null;
+function pointsForUser(email){return Number(loyaltyPoints[email]||0)}
+function saveLoyalty(){localStorage.setItem(LOYALTYKEY,JSON.stringify(loyaltyPoints))}
+function calculatePointsDiscount(subtotal){const u=currentUser();if(!u||!document.getElementById('usePoints')?.checked)return 0;return Math.min(Math.floor(pointsForUser(u.email)/100)*10,Math.floor(subtotal/10)*10)}
+function loadProducts(){try{const saved=JSON.parse(localStorage.getItem(KEY));return Array.isArray(saved)?saved:DEFAULT_ITEMS.map(x=>({...x,stock:99}));}catch(e){return DEFAULT_ITEMS.map(x=>({...x,stock:99}));}}
+function saveProducts(){localStorage.setItem(KEY,JSON.stringify(products));}
+function money(v){return Number(v||0).toFixed(2).replace(/\.00$/,'')+' ج.م';}
+function renderProducts(){const q=document.getElementById('search').value.trim().toLowerCase();const list=products.filter(p=>Number(p.stock)>0&&(category==='الكل'||p.cat===category)&&p.n.toLowerCase().includes(q));document.getElementById('productCount').textContent=list.length+' منتج';document.getElementById('products').innerHTML=list.map(p=>`<article class="card ${p.stock<=0?'stockout':''}"><span class="tag">${escapeHtml(p.cat)}</span><div class="photo" onclick="openProductDetails(${p.id})" style="cursor:pointer">${p.img?`<img src="${p.img}" alt="${escapeHtml(p.n)}">`:`<span class="emoji">${p.emoji||'🛍️'}</span>`}</div><div class="pname" onclick="openProductDetails(${p.id})" style="cursor:pointer">${escapeHtml(p.n)}</div><div class="unit">${escapeHtml(p.unit||'قطعة')} · ${p.stock<=0?'غير متوفر':'متوفر'}</div><div class="pfoot"><div><div class="price">${money(p.price)}</div><small class="muted">للوحدة</small></div><button class="add" ${p.stock<=0||!isStoreOpen()?'disabled':''} onclick="addToCart(${p.id})">${isStoreOpen()?'+':'مغلق'}</button></div><button class="secondary" style="width:100%;margin-top:8px" onclick="openProductDetails(${p.id})">🔎 تفاصيل المنتج</button><button class="secondary" style="width:100%;margin-top:6px" onclick="openReviewForm(${p.id})">⭐ قيّم المنتج واكتب تعليقك</button></article>`).join('')||'<div class="empty">لا توجد منتجات متوفرة حالياً في هذا القسم.</div>';}
+function productImages(p){return Array.isArray(p.images)&&p.images.length?p.images:(p.img?[p.img]:[])}
+function openProductDetails(id){const p=products.find(x=>x.id===id);if(!p)return;const imgs=productImages(p);document.getElementById('detailTitle').textContent=p.n;document.getElementById('detailGallery').innerHTML=imgs.length?`<img id="detailMainImage" src="${imgs[0]}" alt="${escapeHtml(p.n)}">`:`<span class="emoji">${p.emoji||'🛍️'}</span>`;document.getElementById('detailThumbs').innerHTML=imgs.map((im,i)=>`<button onclick="setDetailImage(${i})"><img src="${im}" alt="صورة ${i+1}"></button>`).join('');window.detailProductId=id;document.getElementById('detailContent').innerHTML=`<p class="price">${money(p.price)}</p><p class="muted">${escapeHtml(p.unit||'قطعة')} · ${p.stock>0?'متوفر ('+p.stock+')':'غير متوفر'}</p><h3>الوصف</h3><p>${escapeHtml(p.description||'لا يوجد وصف مضاف لهذا المنتج حالياً.')}</p>${p.options?`<h3>الأحجام / الخيارات</h3>${p.options.split('\n').filter(Boolean).map(x=>`<span class="detail-option">${escapeHtml(x)}</span>`).join('')}`:''}<div class="detail-actions"><button class="favorite-btn" onclick="toggleFavorite(${id})">${favorites.includes(id)?'❤️ إزالة من المفضلة':'🤍 أضف للمفضلة'}</button><button class="primary" ${p.stock<=0||!isStoreOpen()?'disabled':''} onclick="addToCart(${id});closeProductDetails()">🛒 أضف للسلة</button><button class="secondary" onclick="openReviewForm(${id});closeProductDetails()">⭐ تقييم المنتج</button></div><h3>منتجات مشابهة</h3><div class="related-grid">${products.filter(x=>x.id!==id&&(x.cat===p.cat||!p.cat)).slice(0,4).map(x=>`<div class="related-card" onclick="openProductDetails(${x.id})">${x.img?`<img src="${x.img}">`:`<div style="font-size:35px">${x.emoji||'🛍️'}</div>`}<b>${escapeHtml(x.n)}</b><div>${money(x.price)}</div></div>`).join('')||'<p class="muted">لا توجد منتجات مشابهة حالياً.</p>'}</div>`;document.getElementById('productDetailModal').classList.add('show');}
+function setDetailImage(i){const p=products.find(x=>x.id===window.detailProductId),imgs=p?productImages(p):[];if(imgs[i])document.getElementById('detailMainImage').src=imgs[i];}
+function closeProductDetails(){document.getElementById('productDetailModal').classList.remove('show')}
+function toggleFavorite(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];localStorage.setItem('oos_market_favorites_v1',JSON.stringify(favorites));openProductDetails(id);}
+
+function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function setCategory(c,btn){category=c;document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));btn.classList.add('active');renderProducts();}
+function addToCart(id){if(!isStoreOpen())return alert('المتجر مغلق حالياً. راجع مواعيد العمل.');const p=products.find(x=>x.id===id);if(!p||p.stock<=0)return;const current=cart[id]||0;if(current>=p.stock)return alert('الكمية المتاحة غير كافية');cart[id]=current+1;updateCart();}
+function couponDiscount(subtotal){if(!currentCoupon)return 0;return currentCoupon.type==='percent'?Math.min(subtotal,Math.floor(subtotal*currentCoupon.value/100)):Math.min(subtotal,currentCoupon.value);}
+function updateCart(){let count=Object.values(cart).reduce((a,b)=>a+b,0),subtotal=0;document.getElementById('cartCount').textContent=count;document.getElementById('cartCount').setAttribute('aria-label',count+' منتجات في السلة');document.getElementById('cartItems').innerHTML=Object.entries(cart).map(([id,qty])=>{const p=products.find(x=>x.id==id);if(!p)return '';subtotal+=p.price*qty;return `<div class="cartline"><div><b>${escapeHtml(p.n)}</b><div class="muted">${money(p.price)} × ${qty}</div></div><div class="qty"><button onclick="changeQty(${id},-1)">−</button> ${qty} <button onclick="changeQty(${id},1)">+</button></div><b>${money(p.price*qty)}</b></div>`}).join('')||'<div class="empty">السلة فارغة، أضف منتجات للمتابعة.</div>';const u=currentUser(),pts=u?pointsForUser(u.email):0,discount=calculatePointsDiscount(subtotal),cdisc=couponDiscount(subtotal);document.getElementById('pointsDiscount').textContent=money(discount);document.getElementById('couponDiscount').textContent=money(cdisc);document.getElementById('total').textContent=money(subtotal+(count?DELIVERY:0)-discount-cdisc);document.getElementById('loyaltyHint').textContent=u?`رصيدك: ${pts} نقطة. كل 100 نقطة = خصم 10 جنيه. تكسب نقطة لكل 10 جنيه من قيمة المنتجات بعد تسليم الطلب.`:'سجّل الدخول لجمع النقاط واستبدالها.';const cb=document.getElementById('usePoints');if(cb)cb.disabled=!u||pts<100||subtotal<10;}
+function applyCoupon(){const code=document.getElementById('couponCode').value.trim().toUpperCase(),c=coupons.find(x=>x.code===code&&x.active!==false);if(!c){currentCoupon=null;document.getElementById('couponStatus').textContent='الكوبون غير صالح أو غير نشط.';}else{currentCoupon=c;document.getElementById('couponStatus').textContent=`تم تطبيق ${c.code} — خصم ${c.type==='percent'?c.value+'%':money(c.value)}.`;}updateCart();}
+function saveWeeklyList(){localStorage.setItem(WEEKLY_KEY,JSON.stringify(cart));document.getElementById('weeklyListStatus').textContent='تم حفظ قائمة المشتريات على هذا الجهاز.';}
+function loadWeeklyList(){const saved=JSON.parse(localStorage.getItem(WEEKLY_KEY)||'{}');if(!Object.keys(saved).length){document.getElementById('weeklyListStatus').textContent='لا توجد قائمة محفوظة.';return;}cart={};for(const [id,q] of Object.entries(saved)){const p=products.find(x=>x.id==id);if(p&&p.stock>0)cart[id]=Math.min(Number(q)||1,p.stock);}updateCart();document.getElementById('weeklyListStatus').textContent='تم استرجاع القائمة المحفوظة.';}
+function clearWeeklyList(){localStorage.removeItem(WEEKLY_KEY);document.getElementById('weeklyListStatus').textContent='تم حذف القائمة المحفوظة.';}
+function printLastInvoice(){const o=orders.find(x=>x.id===lastInvoiceOrderId);if(o)printInvoice(o);else alert('لا توجد فاتورة حديثة. ابحث عن الطلب من صفحة متابعة الطلب.');}
+function printInvoice(o){const rows=(o.items||[]).map(i=>{const p=products.find(x=>x.id==i.id);const nm=i.name||p?.n||'منتج',pr=Number(i.price??p?.price??0);return `<tr><td>${escapeHtml(nm)}</td><td>${i.qty}</td><td>${money(pr)}</td><td>${money(pr*i.qty)}</td></tr>`}).join('');const w=window.open('','_blank');if(!w){alert('اسمح بفتح نافذة الفاتورة من المتصفح.');return;}w.document.write(`<html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>فاتورة OOs Market</title><style>body{font-family:Arial;padding:20px;color:#222}h1{color:#f36b12}table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8px;text-align:right}.tot{margin-top:15px;line-height:2}
+</style></head><body><h1>OOs Market 🛒</h1><h2>فاتورة طلب #${String(o.id).slice(-6)}</h2><p>التاريخ: ${escapeHtml(o.date||'')}<br>العميل: ${escapeHtml(o.name)}<br>الهاتف: ${escapeHtml(o.phone)}<br>العنوان: ${escapeHtml(o.address)}</p><table><thead><tr><th>المنتج</th><th>الكمية</th><th>السعر</th><th>الإجمالي</th></tr></thead><tbody>${rows}</tbody></table><div class="tot">قيمة المنتجات: ${money(o.subtotal)}<br>التوصيل: ${money(DELIVERY)}<br>خصم النقاط: ${money(o.discount||0)}<br>خصم الكوبون: ${money(o.couponDiscount||0)}<br><b>الإجمالي: ${money(o.total)}</b></div><button onclick="print()">طباعة الفاتورة</button></body></html>`);w.document.close();}
+function changeQty(id,d){const p=products.find(x=>x.id==id);cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];else if(p&&cart[id]>p.stock){cart[id]=p.stock;alert('وصلت للكمية المتاحة');}updateCart();}
+function toggleCart(){document.getElementById('cartPanel').classList.toggle('show');updateCart();if(document.getElementById('cartPanel').classList.contains('show'))document.getElementById('cartPanel').scrollIntoView({behavior:'smooth',block:'start'});}
+function checkout(){if(!isStoreOpen())return alert('عذراً، المتجر مغلق حالياً ولا يمكن إرسال الطلب.');const user=currentUser(),name=(document.getElementById('customer').value.trim()||(user?.name||'')),phone=document.getElementById('phone').value.trim(),address=document.getElementById('address').value.trim();if(!Object.keys(cart).length)return alert('السلة فارغة');if(!name||!phone||!address)return alert('أكمل الاسم ورقم الهاتف والعنوان');document.getElementById('customer').value=name;let lines=[],subtotal=0;for(const [id,n] of Object.entries(cart)){const p=products.find(x=>x.id==id);if(!p)continue;if(n>p.stock)return alert('الكمية غير متوفرة للمنتج: '+p.n);subtotal+=p.price*n;lines.push(`${p.n} × ${n} = ${money(p.price*n)}`);}const discount=calculatePointsDiscount(subtotal),couponOff=couponDiscount(subtotal),redeemedPoints=discount*10,total=subtotal+DELIVERY-discount-couponOff;const order={id:Date.now(),name,phone,email:user?.email||'',address,area:document.getElementById('area').value,items:Object.entries(cart).map(([id,n])=>{const p=products.find(x=>x.id==id);return {id:Number(id),qty:n,name:p?.n||'منتج',price:Number(p?.price||0)};}),subtotal,discount,couponCode:currentCoupon?.code||'',couponDiscount:couponOff,redeemedPoints,total,pointsAwarded:false,status:'جديد',driverName:'',driverPhone:'',trackingHistory:[{status:'جديد',date:new Date().toLocaleString('ar-EG')}],chat:[],date:new Date().toLocaleString('ar-EG')};if(redeemedPoints){loyaltyPoints[user.email]=Math.max(0,pointsForUser(user.email)-redeemedPoints);saveLoyalty();}orders.unshift(order);lastInvoiceOrderId=order.id;localStorage.setItem(ORDERKEY,JSON.stringify(orders));document.getElementById('invoiceActions').style.display='block';const loc=window.customerLocation?`%0Aموقع الزبون: https://maps.google.com/?q=${window.customerLocation.lat},${window.customerLocation.lon}`:'';const msg=`طلب جديد من OOs Market%0Aالاسم: ${encodeURIComponent(name)}%0Aالهاتف: ${encodeURIComponent(phone)}%0Aالمنطقة: ${encodeURIComponent(order.area)}%0Aالعنوان: ${encodeURIComponent(address)}${loc}%0A%0A${encodeURIComponent(lines.join('\n'))}%0Aرسوم التوصيل: ${DELIVERY} جنيه%0Aخصم النقاط: ${discount} جنيه%0Aكوبون: ${order.couponCode||'بدون'} (${couponOff} جنيه)%0Aالإجمالي: ${total} جنيه`;for(const [id,n] of Object.entries(cart)){const p=products.find(x=>x.id==id);if(p)p.stock=Math.max(0,p.stock-n);}saveProducts();cart={};currentCoupon=null;document.getElementById('couponCode').value='';document.getElementById('couponStatus').textContent='';updateCart();renderProducts();window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,'_blank');alert('تم تجهيز طلبك. أرسل الرسالة في واتساب لتأكيده.');}
+function adminLogin(){
+ if(isAdmin){document.getElementById('adminPanel').classList.add('show');return;}
+ const email=prompt('البريد الإلكتروني للمدير:');
+ if(email===null)return;
+ if(email.trim().toLowerCase()!==OWNER_EMAIL){alert('هذا الحساب غير مصرح له بدخول الإدارة.');return;}
+ let saved=localStorage.getItem('oos_market_admin_pass_v1');
+ if(!saved){
+   const first=prompt('إنشاء كلمة مرور جديدة للإدارة (8 أحرف على الأقل):');
+   if(first===null)return;
+   if(first.length<8){alert('كلمة المرور يجب ألا تقل عن 8 أحرف.');return;}
+   const confirmPass=prompt('أعد كتابة كلمة المرور للتأكيد:');
+   if(first!==confirmPass){alert('كلمتا المرور غير متطابقتين.');return;}
+   localStorage.setItem('oos_market_admin_pass_v1',first);
+   alert('تم إعداد كلمة مرور الإدارة على هذا الجهاز.');
+   saved=first;
+ }else{
+   const pass=prompt('أدخل كلمة مرور الإدارة:');
+   if(pass===null)return;
+   if(pass!==saved){alert('كلمة المرور غير صحيحة.');return;}
+ }
+ isAdmin=true;
+ document.getElementById('adminPanel').classList.add('show');
+ adminTab('overview',document.querySelector('.tab'));
+ document.getElementById('adminPanel').scrollIntoView({behavior:'smooth'});
+}
+function logoutAdmin(){isAdmin=false;document.getElementById('adminPanel').classList.remove('show');}
+function adminTab(which,btn){document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');if(which==='overview')overview();if(which==='manage')manageProducts();if(which==='orders')manageOrders();if(which==='drivers')manageDriverApplications();if(which==='permanentDrivers')managePermanentDrivers();if(which==='support')manageSupportInbox();if(which==='reviews')manageProductReviews();if(which==='loyalty')manageLoyalty();if(which==='hours')manageStoreHours();if(which==='coupons')manageCoupons();}
+function isStoreOpen(){if(storeSettings.mode==='open')return true;if(storeSettings.mode==='closed')return false;const now=new Date(),cur=now.getHours()*60+now.getMinutes(),[oh,om]=storeSettings.open.split(':').map(Number),[ch,cm]=storeSettings.close.split(':').map(Number),a=oh*60+om,b=ch*60+cm;return a<=b?(cur>=a&&cur<b):(cur>=a||cur<b);}
+function refreshStoreStatus(){const open=isStoreOpen(),box=document.getElementById('storeNotice');if(box){box.className='store-notice show '+(open?'store-open':'');box.textContent=open?`🟢 المتجر مفتوح الآن · مواعيد العمل ${storeSettings.open} إلى ${storeSettings.close}`:`🔴 المتجر مغلق حالياً · مواعيد العمل ${storeSettings.open} إلى ${storeSettings.close}`;}const cartBtn=document.querySelector('.carttop');if(cartBtn)cartBtn.title=open?'المتجر مفتوح - افتح سلة المشتريات':'المتجر مغلق - يمكنك مراجعة السلة فقط';}
+function manageCoupons(){document.getElementById('adminContent').innerHTML=`<h3>🎟️ إدارة كوبونات الخصم</h3><div class="formgrid"><input class="field" id="couponNewCode" placeholder="رمز الكوبون مثل OOS10"><select class="field" id="couponNewType"><option value="percent">نسبة مئوية %</option><option value="fixed">خصم مبلغ جنيه</option></select><input class="field" id="couponNewValue" type="number" min="1" placeholder="قيمة الخصم"><button class="primary wide" onclick="adminAddCoupon()">إنشاء الكوبون</button></div><div class="adminlist">${coupons.map(c=>`<div class="adminitem"><div class="info"><b>${escapeHtml(c.code)}</b><span class="muted">${c.type==='percent'?c.value+'%':money(c.value)} · ${c.active===false?'غير نشط':'نشط'}</span></div><div class="actions"><button class="mini" onclick="toggleCoupon('${escapeHtml(c.code)}')">${c.active===false?'تفعيل':'تعطيل'}</button><button class="danger" onclick="deleteCoupon('${escapeHtml(c.code)}')">حذف</button></div></div>`).join('')||'<div class="empty">لا توجد كوبونات بعد.</div>'}</div>`;}
+function adminAddCoupon(){const code=document.getElementById('couponNewCode').value.trim().toUpperCase().replace(/[^A-Z0-9_-]/g,''),type=document.getElementById('couponNewType').value,value=Number(document.getElementById('couponNewValue').value);if(!code||!Number.isFinite(value)||value<=0||(type==='percent'&&value>100))return alert('أدخل رمزاً وقيمة صحيحة (النسبة حتى 100%).');if(coupons.some(c=>c.code===code))return alert('هذا الكوبون موجود.');coupons.push({code,type,value,active:true});localStorage.setItem(COUPON_KEY,JSON.stringify(coupons));manageCoupons();alert('تم إنشاء الكوبون.');}
+function toggleCoupon(code){const c=coupons.find(x=>x.code===code);if(!c)return;c.active=c.active===false;localStorage.setItem(COUPON_KEY,JSON.stringify(coupons));manageCoupons();}
+function deleteCoupon(code){if(!confirm('حذف الكوبون؟'))return;coupons=coupons.filter(x=>x.code!==code);localStorage.setItem(COUPON_KEY,JSON.stringify(coupons));manageCoupons();}
+function manageStoreHours(){document.getElementById('adminContent').innerHTML=`<h3>🕒 مواعيد فتح وإغلاق المتجر</h3><p class="muted">حدد ساعات العمل. في وضع التلقائي سيفتح المتجر ويغلق حسب الساعة الموجودة في هاتف العميل.</p><div class="formgrid"><label class="wide">طريقة التشغيل<select class="field" id="storeMode"><option value="auto" ${storeSettings.mode==='auto'?'selected':''}>تلقائي حسب المواعيد</option><option value="open" ${storeSettings.mode==='open'?'selected':''}>فتح المتجر دائماً</option><option value="closed" ${storeSettings.mode==='closed'?'selected':''}>إغلاق المتجر دائماً</option></select></label><label>وقت فتح المتجر<input class="field" id="storeOpenTime" type="time" value="${storeSettings.open}"></label><label>وقت إغلاق المتجر<input class="field" id="storeCloseTime" type="time" value="${storeSettings.close}"></label><button class="primary wide" onclick="saveStoreHours()">حفظ مواعيد المتجر</button></div><div class="order" style="margin-top:14px"><b>الحالة الحالية:</b> <span class="status-pill" id="adminStoreStatus">${isStoreOpen()?'مفتوح الآن':'مغلق الآن'}</span><p class="muted">عند الإغلاق لن يستطيع العميل إضافة منتجات جديدة أو إرسال طلب.</p></div>`;}
+function saveStoreHours(){const mode=document.getElementById('storeMode').value,open=document.getElementById('storeOpenTime').value,close=document.getElementById('storeCloseTime').value;if(!open||!close)return alert('حدد وقت الفتح والإغلاق.');storeSettings={mode,open,close};localStorage.setItem(STORE_SETTINGS_KEY,JSON.stringify(storeSettings));refreshStoreStatus();renderProducts();manageStoreHours();alert('تم حفظ إعدادات مواعيد المتجر.');}
+function overview(){const count=products.length,stock=products.reduce((s,p)=>s+(Number(p.stock)||0),0),profit=Object.entries(cart).reduce((s,[id,n])=>s+n*PROFIT,0);document.getElementById('adminContent').innerHTML=`<div class="adminstats"><div class="stat"><span class="muted">عدد المنتجات</span><b>${count}</b></div><div class="stat"><span class="muted">إجمالي المخزون</span><b>${stock}</b></div><div class="stat"><span class="muted">طلبات مسجلة</span><b>${orders.length}</b></div></div><p class="muted" style="margin-top:14px">هامش الربح مضبوط على 5 جنيه لكل قطعة. تكلفة المنتج تُحسب تلقائياً = سعر البيع − 5 جنيه.</p><button class="primary" onclick="adminTab('manage',document.querySelectorAll('.tab')[1])">إدارة المنتجات</button>`;}
+function manageProducts(){document.getElementById('adminContent').innerHTML=`<h3>${editingId?'تعديل المنتج':'إضافة منتج جديد'}</h3><div class="formgrid"><input class="field" id="pname" placeholder="اسم المنتج"><select class="field" id="pcat"><option>مشروبات</option><option>شاي</option><option>بيض</option><option>منزلي</option></select><input class="field" id="pprice" type="number" min="5" step="1" placeholder="سعر البيع (جنيه)"><input class="field" id="pstock" type="number" min="0" placeholder="الكمية المتوفرة"><input class="field" id="punit" placeholder="الوحدة مثل عبوة / طبق"><textarea class="field wide" id="pdescription" rows="3" placeholder="وصف المنتج / التفاصيل"></textarea><textarea class="field wide" id="poptions" rows="3" placeholder="خيارات الحجم والسعر — كل خيار في سطر، مثال: 500 جرام | 80 جنيه"></textarea><select class="field" id="pemoji"><option value="🛍️">🛍️ منتج</option><option>🥤</option><option>🍵</option><option>🥚</option><option>💧</option><option>🗑️</option></select><label class="field wide">صورة المنتج (اختياري)<input id="pimage" type="file" accept="image/*" style="display:block;margin-top:8px"></label><div class="wide muted" id="costPreview">تكلفة الشراء التقديرية: — · الربح: 5 جنيه</div><div class="wide" style="display:flex;gap:8px"><button class="primary" onclick="saveProductForm()">${editingId?'حفظ التعديلات':'إضافة المنتج'}</button><button class="secondary" onclick="clearProductForm()">تفريغ</button></div></div><h3>قائمة المنتجات</h3><div class="adminlist">${products.map(p=>`<div class="adminitem"><div class="thumb">${p.img?`<img src="${p.img}">`:p.emoji||'🛍️'}</div><div class="info"><b>${escapeHtml(p.n)}</b><span class="muted">${money(p.price)} · التكلفة ${money(p.price-PROFIT)} · المخزون ${p.stock??0}</span></div><div class="actions"><button class="mini" onclick="quickPrice(${p.id},-1)">−</button><button class="mini" onclick="quickPrice(${p.id},1)">+</button><button class="secondary" onclick="editProduct(${p.id})">تعديل</button><button class="danger" onclick="deleteProduct(${p.id})">حذف</button></div></div>`).join('')||'<div class="empty">لا توجد منتجات</div>'}</div>`;document.getElementById('pprice').addEventListener('input',()=>{const v=Number(document.getElementById('pprice').value);document.getElementById('costPreview').textContent=v>=5?`تكلفة الشراء التقديرية: ${money(v-PROFIT)} · الربح: 5 جنيه`:'أقل سعر بيع 5 جنيه للحفاظ على الربح';});}
+function saveProductForm(){const n=document.getElementById('pname').value.trim(),price=Number(document.getElementById('pprice').value),stock=Number(document.getElementById('pstock').value),cat=document.getElementById('pcat').value,unit=document.getElementById('punit').value.trim()||'قطعة',emoji=document.getElementById('pemoji').value,description=document.getElementById('pdescription').value.trim(),options=document.getElementById('poptions').value.trim(),file=document.getElementById('pimage').files[0];if(!n||!Number.isFinite(price)||price<5||!Number.isFinite(stock)||stock<0)return alert('أدخل اسم المنتج وسعراً لا يقل عن 5 جنيه وكمية صحيحة');const finish=img=>{if(editingId){const p=products.find(x=>x.id===editingId);Object.assign(p,{n,price,stock,cat,unit,emoji,description,options});if(img)p.img=img;}else products.unshift({id:Date.now(),n,price,stock,cat,unit,emoji,img:img||'',description,options});saveProducts();editingId=null;manageProducts();renderProducts();};if(file){const reader=new FileReader();reader.onload=()=>finish(reader.result);reader.readAsDataURL(file);}else finish(null);}
+function editProduct(id){const p=products.find(x=>x.id===id);if(!p)return;editingId=id;manageProducts();document.getElementById('pname').value=p.n;document.getElementById('pcat').value=p.cat;document.getElementById('pprice').value=p.price;document.getElementById('pstock').value=p.stock??0;document.getElementById('punit').value=p.unit||'';document.getElementById('pdescription').value=p.description||'';document.getElementById('poptions').value=p.options||'';document.getElementById('pemoji').value=p.emoji||'🛍️';document.getElementById('costPreview').textContent=`تكلفة الشراء التقديرية: ${money(p.price-PROFIT)} · الربح: 5 جنيه`;document.getElementById('pname').scrollIntoView({behavior:'smooth'});}
+function clearProductForm(){editingId=null;manageProducts();}
+function quickPrice(id,delta){const p=products.find(x=>x.id===id);if(!p)return;const next=p.price+delta;if(next<5)return alert('أقل سعر بيع 5 جنيه.');p.price=next;saveProducts();manageProducts();renderProducts();}
+function deleteProduct(id){if(!confirm('هل تريد حذف هذا المنتج؟'))return;products=products.filter(p=>p.id!==id);delete cart[id];saveProducts();manageProducts();}
+const DRIVERKEY='oos_market_v1_driver_applications';
+const CHATKEY='oos_market_v1_support_chats';
+let driverApps=JSON.parse(localStorage.getItem(DRIVERKEY)||'[]');
+let supportChats=JSON.parse(localStorage.getItem(CHATKEY)||'[]');
+function toggleSidePanel(){const p=document.getElementById('sidePanel');p.classList.toggle('show');if(p.classList.contains('show'))sideTab('account',document.querySelector('.side-tabs button'));}
+function sideTab(which,btn){document.querySelectorAll('.side-tabs button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');if(which==='driver')renderDriverForm();else if(which==='account')renderAccountForm();else if(which==='bot')renderSmartAssistant();else renderCustomerChat();}
+const ACCOUNT_KEY='oos_market_accounts_v1', CURRENT_KEY='oos_market_current_user_v1';
+function currentUser(){try{return JSON.parse(localStorage.getItem(CURRENT_KEY)||'null')}catch(e){return null}}
+function updateAccountBadge(){const u=currentUser();const el=document.getElementById('accountName');if(el)el.textContent=u?('مرحباً، '+u.name):'زائر · سجل الدخول';}
+const DELETED_ACCOUNT_KEY='oos_market_deleted_accounts_v1';
+const ACCOUNT_RETENTION_YEARS=12;
+function getDeletedAccounts(){
+ try{return JSON.parse(localStorage.getItem(DELETED_ACCOUNT_KEY)||'[]').filter(x=>Date.now()-Number(x.deletedAt||0)<=ACCOUNT_RETENTION_YEARS*365.25*24*60*60*1000);}
+ catch(e){return [];}
+}
+function saveDeletedAccounts(list){localStorage.setItem(DELETED_ACCOUNT_KEY,JSON.stringify(list));}
+function renderAccountForm(){
+ const u=currentUser();
+ document.getElementById('sideContent').innerHTML=u?`
+ <h3>👤 تفاصيل الحساب</h3>
+ <div class="order">
+  <p><b>اسم الحساب:</b> ${escapeHtml(u.name)}</p>
+  <p><b>البريد الإلكتروني:</b> ${escapeHtml(u.email)}</p>
+  <p><b>حالة الحساب:</b> <span class="status-pill">نشط</span></p>
+  <p><b>رصيد نقاط المكافآت:</b> ${pointsForUser(u.email)} نقطة</p>
+ </div>
+ <button class="secondary" type="button" onclick="userLogout()">تسجيل الخروج</button>
+ <button class="danger" type="button" onclick="deleteUserAccount()">حذف الحساب</button>
+ <p class="muted">يمكن طلب استرجاع الحساب خلال 12 سنة من تاريخ الحذف باستخدام اسم الحساب والبريد الإلكتروني وكلمة المرور.</p>`
+ :`<h3>👤 إنشاء حساب / تسجيل الدخول</h3>
+ <p class="muted">أنشئ حسابك ليظهر اسمك تحت شعار OOs Market.</p>
+ <input class="field" id="accountUserName" placeholder="اسم الحساب / الاسم الكامل">
+ <input class="field" id="accountEmail" type="email" placeholder="البريد الإلكتروني" style="margin-top:8px">
+ <input class="field" id="accountPassword" type="password" placeholder="كلمة المرور" style="margin-top:8px">
+ <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+  <button class="primary" onclick="userRegister()">إنشاء حساب</button>
+  <button class="secondary" onclick="userLogin()">دخول</button>
+ </div>
+ <hr style="border:0;border-top:1px solid var(--line);margin:18px 0">
+ <h3>♻️ استرجاع حساب محذوف</h3>
+ <input class="field" id="restoreUserName" placeholder="اسم الحساب">
+ <input class="field" id="restoreEmail" type="email" placeholder="البريد الإلكتروني" style="margin-top:8px">
+ <input class="field" id="restorePassword" type="password" placeholder="كلمة المرور" style="margin-top:8px">
+ <button class="primary" style="margin-top:10px;width:100%" onclick="restoreUserAccount()">استرجاع حسابي</button>
+ <p class="muted">الاسترجاع متاح خلال 12 سنة من الحذف، إذا كانت بيانات التحقق مطابقة.</p>
+ <p class="muted">هذه نسخة تجريبية تحفظ البيانات على هذا الجهاز والمتصفح فقط.</p>`;
+}
+function deleteUserAccount(){
+ const u=currentUser();if(!u)return;
+ if(!confirm('هل تريد حذف حسابك؟ يمكنك استرجاعه خلال 12 سنة ببيانات التحقق.'))return;
+ const accounts=JSON.parse(localStorage.getItem(ACCOUNT_KEY)||'[]');
+ const index=accounts.findIndex(x=>x.email===u.email);
+ if(index<0)return alert('تعذر العثور على الحساب.');
+ const deleted=accounts.splice(index,1)[0];
+ const archived=getDeletedAccounts().filter(x=>x.email!==deleted.email);
+ archived.push({...deleted,deletedAt:Date.now()});
+ localStorage.setItem(ACCOUNT_KEY,JSON.stringify(accounts));
+ saveDeletedAccounts(archived);
+ localStorage.removeItem(CURRENT_KEY);
+ updateAccountBadge();renderAccountForm();updateCart();
+ alert('تم حذف الحساب. يمكنك استرجاعه خلال 12 سنة من خلال اسم الحساب والبريد الإلكتروني وكلمة المرور.');
+}
+function restoreUserAccount(){
+ const name=document.getElementById('restoreUserName').value.trim();
+ const email=document.getElementById('restoreEmail').value.trim().toLowerCase();
+ const password=document.getElementById('restorePassword').value;
+ if(!name||!email||!password)return alert('أدخل اسم الحساب والبريد الإلكتروني وكلمة المرور.');
+ const archived=getDeletedAccounts();
+ const index=archived.findIndex(x=>x.name===name&&x.email===email&&x.password===password);
+ if(index<0)return alert('لم يتم العثور على حساب محذوف بهذه البيانات، أو انتهت مدة الاسترجاع.');
+ const restored=archived.splice(index,1)[0];
+ const accounts=JSON.parse(localStorage.getItem(ACCOUNT_KEY)||'[]');
+ if(accounts.some(x=>x.email===email))return alert('يوجد حساب نشط بهذا البريد الإلكتروني.');
+ delete restored.deletedAt;
+ accounts.push({name:restored.name,email:restored.email,password:restored.password});
+ localStorage.setItem(ACCOUNT_KEY,JSON.stringify(accounts));
+ saveDeletedAccounts(archived);
+ localStorage.setItem(CURRENT_KEY,JSON.stringify({name:restored.name,email:restored.email}));
+ updateAccountBadge();renderAccountForm();updateCart();
+ alert('تم استرجاع حسابك بنجاح.');
+}
+function userLogout(){localStorage.removeItem(CURRENT_KEY);updateAccountBadge();renderAccountForm();const cb=document.getElementById('usePoints');if(cb)cb.checked=false;updateCart();}
+updateAccountBadge();
+function renderDriverForm(){
+ document.getElementById('sideContent').innerHTML=`
+ <h3>🚚 تسجيل عامل توصيل</h3><p class="muted">املأ البيانات وارفع صورة الوجه ومستند إثبات الهوية. لن يتم تفعيل الحساب إلا بعد مراجعة الإدارة.</p>
+ <input class="field" id="dName" placeholder="الاسم الكامل"><input class="field" id="dPhone" placeholder="رقم الهاتف" inputmode="tel"><input class="field" id="dArea" placeholder="منطقة العمل">
+  <label class="field" style="display:block">وسيلة التوصيل
+   <select class="field" id="dVehicle" style="margin-top:8px">
+    <option value="دراجة هوائية">🚲 دراجة هوائية (عجلة)</option>
+    <option value="دراجة نارية">🏍️ دراجة نارية</option>
+    <option value="سيارة">🚗 سيارة</option>
+   </select>
+  </label>
+ <label class="field" style="display:block">صورة الوجه (إلزامية)<input class="field" id="dFace" type="file" accept="image/*" capture="user"></label>
+ <label class="field" style="display:block">جواز السفر أو البطاقة أو كرت المفوضية (إلزامي)<input class="field" id="dDocument" type="file" accept="image/*,.pdf"></label>
+ <button class="primary" type="button" onclick="submitDriverApplication()">إرسال طلب التسجيل للإدارة</button>
+ <p class="muted">ستظهر الحالة «قيد المراجعة» حتى توافق الإدارة أو ترفض الطلب. لا ترفع مستنداتك إلا بموافقتك.</p><div id="driverSubmitStatus" class="muted"></div>`;
+}
+function readUpload(file){
+ return new Promise((resolve,reject)=>{if(!file){resolve('');return;}
+  const reader=new FileReader();reader.onload=()=>{if(file.type==='application/pdf'){resolve(reader.result);return;}
+   const img=new Image();img.onload=()=>{const scale=Math.min(1,900/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',0.72));};img.onerror=reject;img.src=reader.result;};reader.onerror=reject;reader.readAsDataURL(file);
+ });
+}
+async function submitDriverApplication(){
+ const name=document.getElementById('dName').value.trim(),phone=document.getElementById('dPhone').value.trim(),area=document.getElementById('dArea').value.trim(),vehicle=document.getElementById('dVehicle').value;
+ const face=document.getElementById('dFace').files[0],doc=document.getElementById('dDocument').files[0],status=document.getElementById('driverSubmitStatus');
+ if(!name||!phone||!area||!face||!doc){alert('أكمل البيانات وارفع صورة الوجه ومستند الهوية.');return;}
+ if(face.size>8*1024*1024||doc.size>10*1024*1024){alert('اختر ملفات أصغر من 8 ميجابايت للصورة و10 ميجابايت للمستند.');return;}
+ status.textContent='جارٍ تجهيز الطلب...';
+ try{const app={id:Date.now(),name,phone,area,vehicle,face:await readUpload(face),document:await readUpload(doc),documentName:doc.name,status:'قيد المراجعة',date:new Date().toLocaleString('ar-EG')};
+ driverApps.unshift(app);localStorage.setItem(DRIVERKEY,JSON.stringify(driverApps));status.innerHTML='<span class="status-pill">تم إرسال الطلب — قيد مراجعة الإدارة</span>';
+ ['dName','dPhone','dArea','dFace','dDocument'].forEach(id=>document.getElementById(id).value='');
+ }catch(e){status.textContent='تعذر حفظ الملفات. جرّب ملفات أصغر.';}
+}
+
+// OOs Market automatic customer assistant (local demo; responses use current catalog/orders)\nlet botHistory=[];\nfunction renderSmartAssistant(){\n document.getElementById('sideContent').innerHTML=`<h3>🤖 مساعد OOs Market الذكي</h3><p class="muted">اسأل عن الأسعار والمخزون والطلب والتوصيل. المساعد متاح طوال الوقت في هذه النسخة التجريبية.</p><div class="chatbox" id="botMessages" style="max-height:360px"><div class="chatmsg admin">أهلاً بك 👋 أنا مساعد OOs Market. كيف أقدر أساعدك؟</div><div class="muted">جرب: سعر البيض · المنتجات المتوفرة · رسوم التوصيل · تتبع طلبي</div></div><div style="display:flex;gap:7px"><input class="field" id="botInput" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter')sendBotQuestion()"><button class="primary" onclick="sendBotQuestion()">إرسال</button></div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px"><button class="secondary" onclick="botQuick('ما المنتجات المتوفرة؟')">المنتجات</button><button class="secondary" onclick="botQuick('كم رسوم التوصيل؟')">التوصيل</button><button class="secondary" onclick="botQuick('كيف أتتبع طلبي؟')">تتبع الطلب</button><button class="secondary" onclick="botQuick('أريد التواصل مع الإدارة')">خدمة العملاء</button></div>`;\n botHistory.forEach(m=>appendBotMessage(m.text,m.user));\n}\nfunction botQuick(q){const i=document.getElementById('botInput');if(i)i.value=q;sendBotQuestion();}\nfunction appendBotMessage(text,user=false){const box=document.getElementById('botMessages');if(!box)return;const d=document.createElement('div');d.className='chatmsg'+(user?'':' admin');d.textContent=text;box.appendChild(d);box.scrollTop=box.scrollHeight;}\nfunction sendBotQuestion(){const input=document.getElementById('botInput');if(!input||!input.value.trim())return;const q=input.value.trim();input.value='';botHistory.push({text:q,user:true});appendBotMessage(q,true);const a=answerBot(q);botHistory.push({text:a,user:false});appendBotMessage(a,false);}\nfunction answerBot(q){const t=q.toLowerCase();\n if(/(سعر|بكم|كم.*(تكلف|جنيه)|price)/.test(t)){const found=products.filter(p=>t.includes(p.n.toLowerCase())||p.n.toLowerCase().split(' ').some(w=>w.length>2&&t.includes(w)));if(found.length)return found.map(p=>`${p.n}: ${money(p.price)} (${p.stock>0?'متوفر '+p.stock+'':'غير متوفر'})`).join('\\n');return 'اكتب اسم المنتج الذي تريد معرفة سعره، أو افتح قائمة المنتجات بالمتجر.';}\n if(/(متوفر|المخزون|المنتجات|عندكم|أشياء|منتج)/.test(t)){const available=products.filter(p=>p.stock>0);return available.length?'المنتجات المتوفرة حالياً:\\n'+available.map(p=>`• ${p.n} — ${money(p.price)}`).join('\\n'):'حالياً لا توجد منتجات متوفرة. يمكن مراجعة الإدارة.';}\n if(/(توصيل|رسوم|الشحن|delivery)/.test(t))return `رسوم التوصيل الحالية ${money(DELIVERY)}. أضف المنتجات للسلة ثم أدخل اسمك ورقمك وعنوانك لإكمال الطلب.`;\n if(/(تتبع|وين|حالة|طلبي|الطلب)/.test(t)){const phone=(t.match(/01[0-9]{9}/)||[])[0];if(phone){const os=orders.filter(o=>String(o.phone).replace(/\\D/g,'').includes(phone.replace(/\\D/g,'')));return os.length?os.slice(0,3).map(o=>`طلب رقم ${o.id}: الحالة ${o.status}\\nالإجمالي ${money(o.total)}\\n${o.driverName?'عامل التوصيل: '+o.driverName:''}`).join('\\n\\n'):'لم أجد طلباً بهذا الرقم. تأكد من رقم الهاتف.';}return 'لمعرفة حالة طلبك، أرسل رقم الهاتف الذي سجلت به الطلب (11 رقم).';}\n if(/(الغاء|إلغاء|ألغ|cancel)/.test(t))return 'لإلغاء الطلب، اكتب رقم طلبك في محادثة خدمة العملاء. إذا لم يبدأ التجهيز، يمكن للإدارة مراجعة الإلغاء.';\n if(/(حساب|تسجيل|دخول)/.test(t))return 'اضغط «حساب المستخدم» من التبويبات لإنشاء حساب أو تسجيل الدخول. لا تشارك كلمة المرور مع أي شخص.';\n if(/(عامل|مندوب|توصيل.*عامل)/.test(t))return 'يمكنك التواصل مع عامل التوصيل من صفحة تتبع الطلب بعد تعيينه، وستظهر لك محادثة الطلب وبيانات التواصل المتاحة.';\n if(/(ادارة|الإدارة|خدمة العملاء|مشكلة|شكوى|موظف|إنسان)/.test(t))return 'سأوجهك إلى محادثة خدمة العملاء. اختر تبويب «محادثة خدمة العملاء» وأرسل رسالتك، وستظهر للإدارة في لوحة المتجر عند استخدام نفس الجهاز في هذه النسخة التجريبية.';\n if(/(شكرا|شكراً|تسلم|ممتاز)/.test(t))return 'العفو 😊 يسعدنا خدمتك في OOs Market!';\n return 'أقدر أساعدك في أسعار المنتجات والمخزون ورسوم التوصيل وتتبع الطلب. اكتب سؤالك بصورة أوضح، أو اختر أحد الأزرار السريعة.';\n}\n
+function renderCustomerChat(){
+ document.getElementById('sideContent').innerHTML=`<h3>💬 محادثة خدمة العملاء</h3>
+ <input class="field" id="chatCustomerName" placeholder="اسمك"><input class="field" id="chatCustomerPhone" placeholder="رقم هاتفك" inputmode="tel">
+ <div class="chatbox" id="customerChatMessages"><p class="muted">اكتب رقم هاتفك لعرض رسائلك.</p></div>
+ <textarea class="field" id="chatCustomerText" rows="3" placeholder="اكتب رسالتك لخدمة العملاء..."></textarea>
+ <button class="primary" type="button" onclick="sendCustomerMessage()">إرسال الرسالة</button>
+ <p class="muted">نسخة تجريبية تحفظ المحادثات على هذا الجهاز فقط.</p>`;
+ document.getElementById('chatCustomerPhone').addEventListener('input',loadCustomerChat);
+}
+function loadCustomerChat(){
+ const phone=document.getElementById('chatCustomerPhone').value.trim(),box=document.getElementById('customerChatMessages'),chat=supportChats.find(c=>c.phone===phone);
+ box.innerHTML=chat&&chat.messages.length?chat.messages.map(m=>`<div class="chatmsg ${m.from==='admin'?'admin':''}"><b>${m.from==='admin'?'خدمة العملاء':'أنت'}:</b> ${escapeHtml(m.text)}<div class="muted">${escapeHtml(m.date)}</div></div>`).join(''):'<p class="muted">لا توجد رسائل بعد.</p>';box.scrollTop=box.scrollHeight;
+}
+function sendCustomerMessage(){
+ const name=document.getElementById('chatCustomerName').value.trim(),phone=document.getElementById('chatCustomerPhone').value.trim(),msg=document.getElementById('chatCustomerText').value.trim();
+ if(!name||!phone||!msg){alert('اكتب الاسم ورقم الهاتف والرسالة.');return;}
+ let chat=supportChats.find(c=>c.phone===phone);if(!chat){chat={id:Date.now(),name,phone,messages:[]};supportChats.unshift(chat);}
+ chat.name=name;chat.messages.push({from:'customer',text:msg,date:new Date().toLocaleString('ar-EG')});localStorage.setItem(CHATKEY,JSON.stringify(supportChats));
+ document.getElementById('chatCustomerText').value='';loadCustomerChat();
+}
+function openReviewForm(productId){
+ const p=products.find(x=>x.id===productId);if(!p)return;currentReviewProductId=productId;
+ const user=typeof currentUser==='function'?currentUser():null;
+ document.getElementById('reviewProductName').textContent='المنتج: '+p.n;
+ document.getElementById('reviewCustomerName').value=user?.name||'';
+ document.getElementById('reviewRating').value='5';document.getElementById('reviewComment').value='';
+ document.getElementById('reviewModal').classList.add('show');
+}
+function closeReviewForm(){document.getElementById('reviewModal').classList.remove('show');currentReviewProductId=null;}
+function submitProductReview(){
+ const p=products.find(x=>x.id===currentReviewProductId),name=document.getElementById('reviewCustomerName').value.trim(),rating=Number(document.getElementById('reviewRating').value),comment=document.getElementById('reviewComment').value.trim();
+ if(!p)return alert('المنتج غير موجود');if(!name||!comment)return alert('اكتب اسمك وتعليقك أولاً');
+ productReviews.unshift({id:Date.now(),productId:p.id,productName:p.n,name,rating,comment,status:'جديد',date:new Date().toLocaleString('ar-EG')});
+ localStorage.setItem(REVIEWKEY,JSON.stringify(productReviews));closeReviewForm();alert('شكراً لك. وصل تقييمك وتعليقك إلى إدارة المتجر للمراجعة.');
+}
+function manageProductReviews(){
+ document.getElementById('adminContent').innerHTML='<h3>⭐ تقييمات وتعليقات العملاء (خاصة بالإدارة)</h3>'+productReviews.map(r=>`<div class="order"><div class="orderhead"><b>${escapeHtml(r.productName||'منتج')}</b><span class="status-pill">${escapeHtml(r.status||'جديد')}</span></div><div class="muted">العميل: ${escapeHtml(r.name)} · التقييم: ${'⭐'.repeat(Math.max(1,Math.min(5,Number(r.rating)||1)))} · ${escapeHtml(r.date)}</div><label class="muted" for="review_edit_${r.id}">تعليق العميل (يمكن للإدارة تعديله)</label><textarea class="field" id="review_edit_${r.id}" rows="3">${escapeHtml(r.comment)}</textarea><div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:8px"><select class="field" style="max-width:150px" id="review_status_${r.id}"><option ${r.status==='جديد'?'selected':''}>جديد</option><option ${r.status==='تمت المراجعة'?'selected':''}>تمت المراجعة</option><option ${r.status==='معتمد'?'selected':''}>معتمد</option><option ${r.status==='مرفوض'?'selected':''}>مرفوض</option></select><button class="primary" onclick="saveReviewEdit(${r.id})">حفظ التعديل</button><button class="danger" onclick="deleteProductReview(${r.id})">حذف</button></div></div>`).join('')||'<div class="empty">لا توجد تقييمات أو تعليقات حتى الآن.</div>';
+}
+function saveReviewEdit(id){const r=productReviews.find(x=>x.id===id);if(!r)return;r.comment=document.getElementById('review_edit_'+id).value.trim();r.status=document.getElementById('review_status_'+id).value;localStorage.setItem(REVIEWKEY,JSON.stringify(productReviews));alert('تم حفظ تعديل التقييم والتعليق.');manageProductReviews();}
+function deleteProductReview(id){if(!confirm('هل تريد حذف هذا التقييم والتعليق؟'))return;productReviews=productReviews.filter(r=>r.id!==id);localStorage.setItem(REVIEWKEY,JSON.stringify(productReviews));manageProductReviews();}
+
+function manageDriverApplications(){
+ document.getElementById('adminContent').innerHTML=driverApps.map(a=>`<div class="order"><div class="orderhead"><b>${escapeHtml(a.name)}</b><span class="status-pill">${escapeHtml(a.status)}</span></div>
+ <div class="muted">${escapeHtml(a.phone)} · ${escapeHtml(a.area)} · ${escapeHtml(a.vehicle||'غير محدد')} · ${escapeHtml(a.date)}</div>
+ <div style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0"><div><div class="muted">صورة الوجه</div><img src="${a.face}" style="width:105px;height:105px;object-fit:cover;border-radius:10px"></div>
+ <div><div class="muted">مستند الهوية: ${escapeHtml(a.documentName)}</div>${a.document.startsWith('data:application/pdf')?`<a href="${a.document}" target="_blank">فتح ملف PDF</a>`:`<img src="${a.document}" style="width:130px;max-height:150px;object-fit:contain;border-radius:10px">`}</div></div>
+ ${a.status==='قيد المراجعة'?`<div style="display:flex;gap:8px"><button class="primary" onclick="reviewDriver(${a.id},'مقبول')">موافقة</button><button class="danger" onclick="reviewDriver(${a.id},'مرفوض')">رفض</button></div>`:''}</div>`).join('')||'<div class="empty">لا توجد طلبات تسجيل عمال توصيل.</div>';
+}
+function reviewDriver(id,status){const app=driverApps.find(a=>a.id===id);if(!app)return;app.status=status;localStorage.setItem(DRIVERKEY,JSON.stringify(driverApps));manageDriverApplications();}
+
+// Permanent delivery staff managed by the store administration
+const PERMANENT_DRIVER_KEY='oos_market_permanent_drivers_v1';
+let permanentDrivers=JSON.parse(localStorage.getItem(PERMANENT_DRIVER_KEY)||'[]');
+function savePermanentDrivers(){localStorage.setItem(PERMANENT_DRIVER_KEY,JSON.stringify(permanentDrivers));}
+function managePermanentDrivers(){document.getElementById('adminContent').innerHTML=`<h3>🚚 عمال التوصيل الدائمون — إدارة المتجر</h3><p class="muted">أضف العمال المعتمدين من الإدارة، ثم اختر العامل من قائمة الطلب عند تعيين التوصيل.</p><div class="formgrid"><input class="field" id="permDriverName" placeholder="اسم العامل"><input class="field" id="permDriverPhone" placeholder="رقم الهاتف" inputmode="tel"><input class="field" id="permDriverArea" placeholder="منطقة العمل"><select class="field" id="permDriverStatus"><option value="نشط">نشط — يستقبل طلبات</option><option value="غير نشط">غير نشط</option></select><button class="primary wide" onclick="addPermanentDriver()">إضافة عامل دائم</button></div><h3>قائمة العمال</h3>${permanentDrivers.map(d=>`<div class="order"><div class="orderhead"><b>${escapeHtml(d.name)}</b><span class="status-pill">${escapeHtml(d.status)}</span></div><div class="muted">${escapeHtml(d.phone)} · ${escapeHtml(d.area||'منطقة غير محددة')}</div><div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap"><button class="secondary" onclick="togglePermanentDriver(${d.id})">${d.status==='نشط'?'إيقاف مؤقت':'تفعيل'}</button><button class="danger" onclick="deletePermanentDriver(${d.id})">حذف</button></div></div>`).join('')||'<div class="empty">لم تتم إضافة عمال دائمين بعد.</div>'}`;}
+function addPermanentDriver(){const name=document.getElementById('permDriverName').value.trim(),phone=document.getElementById('permDriverPhone').value.trim(),area=document.getElementById('permDriverArea').value.trim(),status=document.getElementById('permDriverStatus').value;if(!name||!phone)return alert('أدخل اسم العامل ورقم الهاتف.');permanentDrivers.unshift({id:Date.now(),name,phone,area,status,createdAt:new Date().toLocaleString('ar-EG')});savePermanentDrivers();managePermanentDrivers();}
+function togglePermanentDriver(id){const d=permanentDrivers.find(x=>x.id===id);if(!d)return;d.status=d.status==='نشط'?'غير نشط':'نشط';savePermanentDrivers();managePermanentDrivers();}
+function deletePermanentDriver(id){if(!confirm('حذف العامل من قائمة العمال الدائمين؟'))return;permanentDrivers=permanentDrivers.filter(x=>x.id!==id);savePermanentDrivers();managePermanentDrivers();}
+function permanentDriverOptions(selectedId){return '<option value="">— اختر عامل توصيل —</option>'+permanentDrivers.filter(d=>d.status==='نشط').map(d=>`<option value="${d.id}" ${String(d.id)===String(selectedId)?'selected':''}>${escapeHtml(d.name)} · ${escapeHtml(d.phone)}</option>`).join('');}
+function manageSupportInbox(){
+ document.getElementById('adminContent').innerHTML=supportChats.map(c=>`<div class="order"><b>${escapeHtml(c.name)} · ${escapeHtml(c.phone)}</b>
+ <div class="chatbox">${c.messages.map(m=>`<div class="chatmsg ${m.from==='admin'?'admin':''}"><b>${m.from==='admin'?'الإدارة':'العميل'}:</b> ${escapeHtml(m.text)}<div class="muted">${escapeHtml(m.date)}</div></div>`).join('')}</div>
+ <textarea class="field" id="reply_${c.id}" rows="2" placeholder="اكتب رد الإدارة"></textarea><button class="primary" onclick="replySupport(${c.id})">إرسال الرد</button></div>`).join('')||'<div class="empty">لا توجد محادثات عملاء.</div>';
+}
+function replySupport(id){const chat=supportChats.find(c=>c.id===id),field=document.getElementById('reply_'+id);if(!chat||!field.value.trim())return;chat.messages.push({from:'admin',text:field.value.trim(),date:new Date().toLocaleString('ar-EG')});localStorage.setItem(CHATKEY,JSON.stringify(supportChats));manageSupportInbox();}
+
+
+const TRACK_STEPS=['جديد','قيد التجهيز','تم تعيين عامل توصيل','استلم العامل الطلب','في الطريق','تم التسليم'];
+function ensureOrderExtras(o){if(!Array.isArray(o.trackingHistory))o.trackingHistory=[{status:o.status||'جديد',date:o.date||''}];if(!Array.isArray(o.chat))o.chat=[];}
+function findHubOrder(id,phone){const o=orders.find(x=>String(x.id)===String(id)||String(x.id).slice(-6)===String(id));return o&&String(o.phone).replace(/\s/g,'')===String(phone).replace(/\s/g,'')?o:null;}
+function openOrderHub(role){const id=document.getElementById(role==='driver'?'driverOrderId':'trackOrderId').value.trim(),phone=document.getElementById(role==='driver'?'driverCustomerPhone':'trackPhone').value.trim(),out=document.getElementById(role==='driver'?'driverHubContent':'orderHubContent');const o=findHubOrder(id,phone);if(!o){out.innerHTML='<p class="muted">لم يتم العثور على الطلب. تأكد من رقم الطلب ورقم الهاتف.</p>';return;}ensureOrderExtras(o);out.innerHTML=renderHubOrder(o,role);}
+function renderHubOrder(o,role){const steps=TRACK_STEPS.map(s=>`<span class="progress-step ${TRACK_STEPS.indexOf(s)<=TRACK_STEPS.indexOf(o.status)?'done':''}">${s}</span>`).join('');const messages=o.chat.map(m=>`<div class="chat-bubble ${m.from===role?'mine':''}"><b>${m.from==='customer'?'العميل':m.from==='driver'?'عامل التوصيل':'الإدارة'}:</b> ${escapeHtml(m.text)}<div class="muted">${escapeHtml(m.date||'')}</div></div>`).join('')||'<p class="muted">لا توجد رسائل بعد.</p>';let driverControls=role==='driver'?`<div class="checkoutgrid"><input class="field" id="hubDriverName_${o.id}" placeholder="اسم عامل التوصيل" value="${escapeHtml(o.driverName||'')}"><input class="field" id="hubDriverPhone_${o.id}" placeholder="رقم العامل" value="${escapeHtml(o.driverPhone||'')}"><select class="field wide" id="hubStatus_${o.id}">${TRACK_STEPS.map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select><button class="primary wide" onclick="saveHubDriver(${o.id})">حفظ وتحديث الحالة</button></div>`:'';return `<div class="order"><b>طلب #${String(o.id).slice(-6)} · ${escapeHtml(o.name)}</b><div class="muted">${escapeHtml(o.area)} · ${escapeHtml(o.address)}</div><div class="order-progress">${steps}</div><p>الحالة الحالية: <b>${escapeHtml(o.status)}</b></p><p>عامل التوصيل: ${escapeHtml(o.driverName||'لم يتم تعيين عامل بعد')}</p>${driverControls}<div class="hub-actions"><button class="callbtn" onclick="startOrderCall('${escapeHtml(o.phone)}','${escapeHtml(o.driverPhone||'')}','${role}')">📞 مكالمة</button><button class="secondary" onclick="alert('المكالمة الصوتية داخل التطبيق تحتاج خادم اتصال WebRTC وربط حسابات. هذه النسخة لا تنشئ مكالمة حقيقية بعد.')">🎙️ مكالمة داخل التطبيق</button></div><div class="order-chat"><h3>💬 دردشة الطلب</h3>${messages}<textarea class="field" rows="2" id="hubMessage_${o.id}" placeholder="اكتب رسالة..."></textarea><button class="primary" onclick="sendOrderChat(${o.id},'${role}')">إرسال</button><p class="muted">الرسائل محفوظة محلياً على هذا الجهاز في النسخة التجريبية.</p></div></div>`;}
+function startOrderCall(customerPhone,driverPhone,role){const phone=role==='driver'?customerPhone:driverPhone;if(!phone){alert('رقم الطرف الآخر غير مسجل بعد.');return;}if(confirm('سيتم فتح الاتصال الهاتفي خارج التطبيق. هل تريد المتابعة؟'))location.href='tel:'+phone;}
+function sendOrderChat(id,role){const o=orders.find(x=>x.id===id),field=document.getElementById('hubMessage_'+id);if(!o||!field||!field.value.trim())return;ensureOrderExtras(o);o.chat.push({from:role,text:field.value.trim(),date:new Date().toLocaleString('ar-EG')});localStorage.setItem(ORDERKEY,JSON.stringify(orders));const idField=document.getElementById(role==='driver'?'driverOrderId':'trackOrderId'),phoneField=document.getElementById(role==='driver'?'driverCustomerPhone':'trackPhone');openOrderHub(role);}
+function saveHubDriver(id){const o=orders.find(x=>x.id===id);if(!o)return;o.driverName=document.getElementById('hubDriverName_'+id).value.trim();o.driverPhone=document.getElementById('hubDriverPhone_'+id).value.trim();const status=document.getElementById('hubStatus_'+id).value;if(status!==o.status){o.status=status;o.trackingHistory.push({status,date:new Date().toLocaleString('ar-EG')});}localStorage.setItem(ORDERKEY,JSON.stringify(orders));openOrderHub('driver');alert('تم حفظ بيانات العامل وتحديث حالة الطلب.');}
+
+renderProducts();updateCart();
+function manageOrders(){document.getElementById('adminContent').innerHTML=orders.map(o=>{ensureOrderExtras(o);return `<div class="order"><div class="orderhead"><b>طلب #${String(o.id).slice(-6)} · ${escapeHtml(o.name)}</b><b>${money(o.total)}</b></div><div class="muted">${escapeHtml(o.date)} · ${escapeHtml(o.area)} · ${escapeHtml(o.phone)}</div><p>${escapeHtml(o.address)}</p><div class="muted">${o.items.map(i=>{const p=products.find(x=>x.id==i.id);return `${escapeHtml(p?.n||'منتج محذوف')} × ${i.qty}`}).join('، ')}</div><div class="checkoutgrid"><select class="field wide" id="adminPermanentDriver_${o.id}" onchange="fillAssignedDriver(${o.id})">${permanentDriverOptions(o.permanentDriverId)}</select><input class="field" id="adminDriverName_${o.id}" placeholder="اسم العامل (تلقائي)" value="${escapeHtml(o.driverName||'')}"><input class="field" id="adminDriverPhone_${o.id}" placeholder="رقم العامل (تلقائي)" value="${escapeHtml(o.driverPhone||'')}"><select class="field wide" id="adminStatus_${o.id}">${TRACK_STEPS.map(s=>`<option ${o.status===s?'selected':''}>${s}</option>`).join('')}</select><button class="primary wide" onclick="adminSaveOrder(${o.id})">حفظ العامل والحالة</button></div><div class="muted">عدد رسائل الدردشة: ${(o.chat||[]).length}</div><button class="secondary" style="margin-top:8px" onclick="printInvoice(orders.find(x=>x.id===${o.id}))">🧾 طباعة الفاتورة</button><button class="danger" style="margin-top:8px" onclick="deleteOrder(${o.id})">حذف الطلب</button></div>`}).join('')||'<div class="empty">لا توجد طلبات مسجلة حتى الآن.</div>';}
+function fillAssignedDriver(id){const sel=document.getElementById('adminPermanentDriver_'+id),d=permanentDrivers.find(x=>String(x.id)===String(sel?.value));if(d){document.getElementById('adminDriverName_'+id).value=d.name;document.getElementById('adminDriverPhone_'+id).value=d.phone;}}
+function adminSaveOrder(id){const o=orders.find(x=>x.id===id);if(!o)return;ensureOrderExtras(o);o.permanentDriverId=document.getElementById('adminPermanentDriver_'+id)?.value||'';o.driverName=document.getElementById('adminDriverName_'+id).value.trim();o.driverPhone=document.getElementById('adminDriverPhone_'+id).value.trim();const status=document.getElementById('adminStatus_'+id).value;if(status!==o.status){o.status=status;o.trackingHistory.push({status,date:new Date().toLocaleString('ar-EG')});}localStorage.setItem(ORDERKEY,JSON.stringify(orders));manageOrders();alert('تم تحديث الطلب.');}
+
+function setOrderStatus(id,status){const o=orders.find(x=>x.id===id);if(o){ensureOrderExtras(o);if(status!==o.status)o.trackingHistory.push({status,date:new Date().toLocaleString('ar-EG')});o.status=status;if(status==='تم التسليم'&&!o.pointsAwarded&&o.email){const earned=Math.floor(Number(o.subtotal||o.total||0)/10);loyaltyPoints[o.email]=pointsForUser(o.email)+earned;o.pointsAwarded=true;o.pointsEarned=earned;saveLoyalty();alert(`تم إضافة ${earned} نقطة مكافأة للعميل.`);}localStorage.setItem(ORDERKEY,JSON.stringify(orders));manageOrders();}}
+function manageLoyalty(){const accounts=JSON.parse(localStorage.getItem(ACCOUNT_KEY)||'[]');document.getElementById('adminContent').innerHTML='<h3>⭐ إدارة نقاط المكافآت</h3><p class="muted">كل 100 نقطة = خصم 10 جنيه. يحصل العميل على نقطة لكل 10 جنيه من قيمة المنتجات بعد تأكيد التسليم.</p>'+accounts.map(u=>`<div class="order"><b>${escapeHtml(u.name)}</b><div class="muted">${escapeHtml(u.email)}</div><p>الرصيد الحالي: <b>${pointsForUser(u.email)} نقطة</b></p><div style="display:flex;gap:8px;flex-wrap:wrap"><input class="field" style="max-width:130px" type="number" min="0" id="pts_${encodeURIComponent(u.email)}" value="${pointsForUser(u.email)}"><button class="primary" onclick="adminSetPoints('${encodeURIComponent(u.email)}')">حفظ الرصيد</button></div></div>`).join('')||'<div class="empty">لا توجد حسابات عملاء مسجلة.</div>'; }
+function adminSetPoints(encoded){const email=decodeURIComponent(encoded),field=document.getElementById('pts_'+encoded),v=Math.max(0,Math.floor(Number(field.value)||0));loyaltyPoints[email]=v;saveLoyalty();manageLoyalty();}
+function deleteOrder(id){if(!confirm('حذف الطلب؟'))return;orders=orders.filter(x=>x.id!==id);localStorage.setItem(ORDERKEY,JSON.stringify(orders));manageOrders();}
+function setLang(v){
+ const zh=v==='zh',en=v==='en',id=v==='id';
+ const T={
+ ar:{cart:'🛒 سلة المشتريات',close:'إغلاق',delivery:'رسوم التوصيل',total:'الإجمالي',checkout:'تأكيد الطلب عبر واتساب',customer:'الاسم الكامل',phone:'رقم الهاتف',address:'العنوان بالتفصيل',locCustomer:'📍 تحديد موقع الزبون',hero:'كل احتياجاتك في مكان واحد',heroSub:'تسوق بسهولة… وطلبك لحد باب البيت 🚚',shop:'ابدأ التسوق',sections:'تسوق حسب القسم',categorySub:'اختار احتياجاتك',products:'المنتجات',admin:'إدارة المتجر',driver:'عامل التوصيل',driverText:'يمكن لعامل التوصيل تحديد موقعه وإرساله إلى المتجر عبر واتساب.',driverBtn:'📍 تحديد موقع عامل التوصيل وإرساله',search:'ابحث عن منتج...',all:'الكل',drinks:'🥤 مشروبات',tea:'🍵 الشاي',eggs:'🥚 البيض',home:'🏠 مستلزمات المنزل',noLoc:'لم يتم تحديد الموقع بعد',bannerTitle:'✨ عروض اليوم',bannerText:'اختيارات مميزة وأسعار مناسبة',deals:'العروض',popular:'منتجات شائعة'},
+ en:{cart:'🛒 Cart',close:'Close',delivery:'Delivery fee',total:'Total',checkout:'Confirm order via WhatsApp',customer:'Full name',phone:'Phone number',address:'Full address',locCustomer:'📍 Get customer location',hero:'Everything you need in one place',heroSub:'Easy shopping, delivered to your door 🚚',shop:'Shop now',sections:'Shop by category',categorySub:'Browse your essentials',products:'Popular Products',admin:'Store management',driver:'Delivery partner',driverText:'Delivery partners can share their current location with the store via WhatsApp.',driverBtn:'📍 Share delivery location',search:'Search products...',all:'All',drinks:'🥤 Drinks',tea:'🍵 Tea',eggs:'🥚 Eggs',home:'🏠 Home supplies',noLoc:'Location not obtained yet',bannerTitle:'🔥 Deals',bannerText:'Great picks. Simple shopping. Convenient delivery.',deals:'Deals',popular:'Popular Products'},
+ zh:{cart:'🛒 购物车',close:'关闭',delivery:'配送费',total:'总计',checkout:'通过 WhatsApp 确认订单',customer:'客户姓名',phone:'电话号码',address:'详细地址',locCustomer:'📍 获取客户位置',hero:'所需商品，一站购齐',heroSub:'轻松购物，送货到家 🚚',shop:'立即购物',sections:'快速分类',categorySub:'选择商品类别',products:'热门商品',admin:'商店管理',driver:'配送员',driverText:'配送员可以获取当前位置并通过 WhatsApp 发送给商店。',driverBtn:'📍 获取并发送配送位置',search:'搜索商品...',all:'全部',drinks:'🥤 饮料',tea:'🍵 茶',eggs:'🥚 鸡蛋',home:'🏠 家居用品',noLoc:'尚未获取位置',bannerTitle:'🎉 今日优惠 · 限时精选',bannerText:'优惠商品快速浏览，分类清晰，购物更方便',deals:'优惠专区',popular:'人气商品'},
+ id:{cart:'🛒 Keranjang',close:'Tutup',delivery:'Biaya pengiriman',total:'Total',checkout:'Konfirmasi pesanan via WhatsApp',customer:'Nama lengkap',phone:'Nomor telepon',address:'Alamat lengkap',locCustomer:'📍 Ambil lokasi pelanggan',hero:'Semua kebutuhan dalam satu tempat',heroSub:'Belanja mudah, diantar ke rumah 🚚',shop:'Mulai belanja',sections:'Belanja berdasarkan kategori',categorySub:'Pilih kebutuhan Anda',products:'Produk',admin:'Manajemen toko',driver:'Kurir',driverText:'Kurir dapat membagikan lokasi kepada toko melalui WhatsApp.',driverBtn:'📍 Bagikan lokasi kurir',search:'Cari produk...',all:'Semua',drinks:'🥤 Minuman',tea:'🍵 Teh',eggs:'🥚 Telur',home:'🏠 Perlengkapan rumah',noLoc:'Lokasi belum tersedia',bannerTitle:'✨ Promo hari ini',bannerText:'Pilihan menarik dengan harga terjangkau',deals:'Promo',popular:'Produk populer'}
+ };
+ const t=T[v]||T.ar;
+ document.body.classList.remove('lang-ar','lang-en','lang-zh','lang-id');document.body.classList.add('lang-'+v);
+ document.querySelector('.hero h1').textContent=t.hero;document.querySelector('.hero p').textContent=t.heroSub;document.querySelector('.shopnow').textContent=t.shop;
+ document.getElementById('categoryHeading').textContent=t.sections;document.getElementById('categorySub').textContent=t.categorySub;
+ document.getElementById('productsHeading').textContent=t.products;document.querySelector('.admin-shortcut b').textContent=t.admin;
+ document.querySelector('#cartPanel .panelhead h2').textContent=t.cart;document.querySelector('#cartPanel .panelhead .secondary').textContent=t.close;
+ document.querySelectorAll('.totalrow')[0].firstElementChild.textContent=t.delivery;document.querySelectorAll('.totalrow')[1].firstElementChild.textContent=t.total;
+ document.getElementById('customer').placeholder=t.customer;document.getElementById('phone').placeholder=t.phone;document.getElementById('address').placeholder=t.address;document.getElementById('search').placeholder=t.search;
+ document.querySelector('#cartPanel .primary').textContent=t.checkout;document.querySelector('#cartPanel button[onclick*="getMyLocation"]').textContent=t.locCustomer;
+ document.querySelector('#driverLocationPanel h2').textContent='🚚 '+t.driver;document.querySelector('#driverLocationPanel p').textContent=t.driverText;document.querySelector('#driverLocationPanel button').textContent=t.driverBtn;
+ const chips=document.querySelectorAll('.chip');if(chips.length>=5){chips[0].textContent=t.all;chips[1].textContent=t.drinks;chips[2].textContent=t.tea;chips[3].textContent=t.eggs;chips[4].textContent=t.home;}
+ document.getElementById('styleBannerTitle').textContent=t.bannerTitle;document.getElementById('styleBannerText').textContent=t.bannerText;
+ document.getElementById('lang').value=v;document.documentElement.lang=v;document.documentElement.dir=(v==='ar')?'rtl':'ltr';localStorage.setItem('oos_market_language',v);
+ renderProducts();
+}
+
+window.customerLocation=null;
+function getMyLocation(role){
+ const status=document.getElementById(role==='customer'?'customerLocationStatus':'driverLocationStatus');
+ if(!navigator.geolocation){status.textContent='المتصفح لا يدعم تحديد الموقع';return;}
+ status.textContent='جارٍ طلب إذن الوصول إلى الموقع...';
+ navigator.geolocation.getCurrentPosition(pos=>{
+  const lat=pos.coords.latitude.toFixed(6),lon=pos.coords.longitude.toFixed(6);
+  const map=`https://maps.google.com/?q=${lat},${lon}`;
+  if(role==='customer'){
+   window.customerLocation={lat,lon};
+   status.innerHTML=`تم تحديد موقع الزبون بنجاح: <a href="${map}" target="_blank">عرض الموقع على الخريطة</a>`;
+  }else{
+   status.innerHTML=`تم تحديد موقع عامل التوصيل: <a href="${map}" target="_blank">عرض الموقع على الخريطة</a>`;
+   const text=encodeURIComponent(`موقع عامل توصيل OOs Market الحالي: ${map}`);
+   window.open(`https://wa.me/${WHATSAPP}?text=${text}`,'_blank');
+  }
+ },err=>{
+  const messages={1:'يجب السماح للموقع بالوصول إلى GPS من إعدادات الهاتف.',2:'تعذر تحديد الموقع. تحقق من تشغيل GPS.',3:'انتهت مهلة تحديد الموقع. حاول مرة أخرى.'};
+  status.textContent=messages[err.code]||'حدث خطأ أثناء تحديد الموقع.';
+ },{enableHighAccuracy:true,timeout:15000,maximumAge:0});
+}
+setLang(localStorage.getItem('oos_market_language')||'ar');renderProducts();updateCart();refreshStoreStatus();setInterval(()=>{const wasOpen=window._storeWasOpen;refreshStoreStatus();if(wasOpen!==undefined&&wasOpen!==isStoreOpen())renderProducts();window._storeWasOpen=isStoreOpen();},30000);
+
+function setBottomActive(btn){document.querySelectorAll('.bottom-nav button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');}
+function homeNav(btn){setBottomActive(btn);window.scrollTo({top:0,behavior:'smooth'});}
+function offersNav(btn){setBottomActive(btn);document.getElementById('productsTitle').scrollIntoView({behavior:'smooth'});alert('العروض الخاصة ستظهر هنا عند إضافتها من إدارة المتجر.');}
+function chatNav(btn){setBottomActive(btn);toggleSidePanel();sideTab('chat',document.querySelectorAll('.side-tabs button')[2]);}
+function accountNav(btn){setBottomActive(btn);toggleSidePanel();sideTab('account',document.querySelectorAll('.side-tabs button')[0]);}
+
+
+/* OOs Market marketplace expansion */
+const OOS_EXTRA_CATEGORIES=['ملابس رجالية','ملابس نسائية','ملابس أطفال','أحذية','شنط وإكسسوارات','مطاعم','صيدليات','إلكترونيات','خدمات'];
+function addMarketplaceCategoryOptions(){
+ const sel=document.getElementById('pcat');
+ if(sel) OOS_EXTRA_CATEGORIES.forEach(c=>{if(![...sel.options].some(o=>o.value===c)){const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);}});
+}
+const _oosManageProducts=manageProducts;
+manageProducts=function(){_oosManageProducts();addMarketplaceCategoryOptions();
+ const form=document.querySelector('#adminContent .formgrid');
+ if(!form||document.getElementById('pimagesExtra'))return;
+ const extra=document.createElement('div');extra.className='wide order';extra.innerHTML=`
+ <h3>👕 خيارات الملابس والوسائط</h3>
+ <label class="muted">صور متعددة للمنتج<input class="field" id="pimagesExtra" type="file" accept="image/*" multiple></label>
+ <label class="muted" style="display:block;margin-top:8px">فيديو المنتج<input class="field" id="pvideoExtra" type="file" accept="video/*"></label>
+ <input class="field" id="psizesExtra" placeholder="المقاسات مفصولة بفاصلة: S, M, L, XL">
+ <input class="field" id="pcolorsExtra" placeholder="الألوان مفصولة بفاصلة: أسود, أبيض, أزرق">
+ <textarea class="field wide" id="pvariantStockExtra" rows="2" placeholder="مخزون كل مقاس/لون (مثال: M-أسود: 5، L-أبيض: 3)"></textarea>
+ <p class="muted">يمكن ترك هذه الحقول فارغة للمنتجات العادية.</p>`;
+ form.appendChild(extra);
+ if(editingId){const p=products.find(x=>x.id===editingId);if(p){document.getElementById('psizesExtra').value=p.sizes||'';document.getElementById('pcolorsExtra').value=p.colors||'';document.getElementById('pvariantStockExtra').value=p.variantStock||'';}}
+};
+const _oosSaveProductForm=saveProductForm;
+saveProductForm=function(){
+ const targetId=editingId,size=document.getElementById('psizesExtra')?.value.trim()||'',color=document.getElementById('pcolorsExtra')?.value.trim()||'',variantStock=document.getElementById('pvariantStockExtra')?.value.trim()||'';
+ const imageFiles=[...(document.getElementById('pimagesExtra')?.files||[])],videoFile=document.getElementById('pvideoExtra')?.files?.[0];
+ const readFile=f=>new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>resolve(null);r.readAsDataURL(f);});
+ Promise.all([...imageFiles.map(readFile),...(videoFile?[readFile(videoFile)]:[])]).then(media=>{
+  _oosSaveProductForm();const p=targetId?products.find(x=>x.id===targetId):products[0];if(!p)return;
+  p.sizes=size;p.colors=color;p.variantStock=variantStock;
+  const imgs=media.slice(0,imageFiles.length).filter(Boolean);if(imgs.length){p.images=imgs;p.img=imgs[0];}
+  if(videoFile&&media[media.length-1])p.video=media[media.length-1];
+  saveProducts();renderProducts();if(isAdmin)manageProducts();
+ });
+};
+const _oosOpenProductDetails=openProductDetails;
+openProductDetails=function(id){
+ _oosOpenProductDetails(id);const p=products.find(x=>x.id===id);if(!p)return;const box=document.getElementById('detailContent');
+ const media=p.video?`<h3>🎬 فيديو المنتج</h3><video controls playsinline style="width:100%;max-height:260px;border-radius:12px;background:#111" src="${p.video}"></video>`:'';
+ const variants=`${p.sizes?`<p><b>المقاسات:</b> ${escapeHtml(p.sizes)}</p>`:''}${p.colors?`<p><b>الألوان:</b> ${escapeHtml(p.colors)}</p>`:''}${p.variantStock?`<p><b>المخزون حسب المقاس/اللون:</b> ${escapeHtml(p.variantStock)}</p>`:''}`;
+ box.insertAdjacentHTML('afterbegin',media+variants);
+};
+function addressFields(){
+ const ids=['addrGovernorate','addrCity','addrArea','addrStreet','addrBuilding','addrFloor','addrApartment','addrLandmark'],labels=['المحافظة','المدينة','المنطقة','الشارع','المبنى','الدور','الشقة','علامة مميزة'];
+ return ids.map((id,i)=>{const v=document.getElementById(id)?.value.trim();return v?labels[i]+': '+v:'';}).filter(Boolean).join('، ');
+}
+function addressOwnerKey(){const u=currentUser();return 'oos_saved_addresses_'+(u?.email||document.getElementById('phone')?.value.trim()||'guest');}
+function refreshSavedAddressOptions(){
+ const s=document.getElementById('savedAddressSelect');if(!s)return;const arr=JSON.parse(localStorage.getItem(addressOwnerKey())||'[]');
+ s.innerHTML='<option value="">اختيار عنوان محفوظ (المنزل / العمل)</option>'+arr.map((a,i)=>`<option value="${i}">${escapeHtml(a.label)}</option>`).join('');
+}
+function saveCurrentAddress(){
+ const detail=addressFields();if(!detail)return alert('أدخل بيانات العنوان أولاً.');const label=prompt('اسم العنوان: المنزل أو العمل أو عنوان آخر','المنزل');if(!label)return;
+ const arr=JSON.parse(localStorage.getItem(addressOwnerKey())||'[]');arr.push({label,detail,fields:['addrGovernorate','addrCity','addrArea','addrStreet','addrBuilding','addrFloor','addrApartment','addrLandmark'].map(id=>document.getElementById(id)?.value||'')});
+ localStorage.setItem(addressOwnerKey(),JSON.stringify(arr));refreshSavedAddressOptions();alert('تم حفظ العنوان على هذا الجهاز.');
+}
+function loadSavedAddress(){
+ const s=document.getElementById('savedAddressSelect');if(!s||s.value==='')return;const arr=JSON.parse(localStorage.getItem(addressOwnerKey())||'[]'),a=arr[Number(s.value)];if(!a)return;
+ ['addrGovernorate','addrCity','addrArea','addrStreet','addrBuilding','addrFloor','addrApartment','addrLandmark'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.value=a.fields[i]||'';});
+ document.getElementById('address').value=a.detail;
+}
+const _oosCheckout=checkout;
+checkout=function(){
+ const detail=addressFields(),legacy=document.getElementById('address');if(detail&&legacy)legacy.value=detail;
+ if(!legacy?.value.trim())return alert('أدخل تفاصيل عنوان التوصيل.');_oosCheckout();
+};
+document.getElementById('phone')?.addEventListener('change',refreshSavedAddress
