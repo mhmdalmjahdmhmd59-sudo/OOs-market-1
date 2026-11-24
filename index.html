@@ -539,4 +539,7 @@ checkout=function(){
  const detail=addressFields(),legacy=document.getElementById('address');if(detail&&legacy)legacy.value=detail;
  if(!legacy?.value.trim())return alert('أدخل تفاصيل عنوان التوصيل.');_oosCheckout();
 };
-document.getElementById('phone')?.addEventListener('change',refreshSavedAddress
+document.getElementById('phone')?.addEventListener('change',refreshSavedAddressOptions);refreshSavedAddressOptions();
+ </script>
+</body>
+</html>
